@@ -1,0 +1,69 @@
+@use "../../../styles/global.scss" as *;
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin-top: 7.3rem;
+  //   background: url("../../Data/imgs/brooke-cagle-8jp-6SjVibM-unsplash.jpg")
+  //     center / cover no-repeat;
+  z-index: 0;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &__text-container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__main-text {
+    display: flex;
+    position: inherit;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 10;
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  &__sub-text {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    position: inherit;
+    z-index: 10;
+    margin: 0 1rem;
+    padding: 1.5rem 0;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 1rem 1rem;
+    background: #fff;
+    width: 70%;
+    color: #30271c;
+    z-index: 10;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &:hover {
+      background: #c7a17a;
+      color: #fff;
+      z-index: 10;
+    }
+  }
+}

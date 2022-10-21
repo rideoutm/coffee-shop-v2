@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  background: rgba(21, 20, 18, 1);
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+  &__ham-menu {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  &__top-line,
+  &__mid-line,
+  &__btm-line {
+    background: #fff;
+    border: 1px solid #fff;
+  }
+
+  &__mid-line {
+    margin: 0.75rem 0;
+  }
+}
