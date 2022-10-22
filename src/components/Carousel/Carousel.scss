@@ -1,14 +1,15 @@
 @use "../../../styles/global.scss" as *;
+
 .carousel {
-  position: relative;
+  position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
-  width: 100%;
-  margin-top: 7.3rem;
-  //   background: url("../../Data/imgs/brooke-cagle-8jp-6SjVibM-unsplash.jpg")
-  //     center / cover no-repeat;
+
+  margin-top: 7rem;
   z-index: 0;
 
   &:after {
@@ -20,14 +21,33 @@
     height: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  &__main-container {
+    display: flex;
+    z-index: 10;
+    // width: 100vw;
+    height: 100vh;
+    // min-width: 100%;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    overflow: hidden;
   }
 
   &__text-container {
-    position: relative;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
     z-index: 10;
+    width: 100vw;
   }
 
-  &__main-text {
+  &__main-text-0,
+  &__main-text-1,
+  &__main-text-2 {
     display: flex;
     position: inherit;
     justify-content: center;
@@ -36,7 +56,35 @@
     z-index: 10;
     font-size: 3rem;
     line-height: 3.2rem;
+    // opacity: 0;
+    // animation: 1s fadeleft 0.25s forwards;
+
+    // @keyframes fadeleft {
+    //   0% {
+    //     opacity: 0;
+    //     translate: 100vw;
+    //   }
+    //   100% {
+    //     opacity: 1;
+    //     translate: 0vw;
+    //   }
+    // }
   }
+
+  // &__main-text-2 {
+  //   animation: 1s fadeleft 4s forwards;
+
+  //   @keyframes fadeleft {
+  //     0% {
+  //       opacity: 0;
+  //       translate: 100%;
+  //     }
+  //     100% {
+  //       opacity: 1;
+  //       translate: -95%;
+  //     }
+  //   }
+  // }
 
   &__sub-text {
     text-align: center;
