@@ -69,7 +69,7 @@ export default function Carousel() {
         setAnimation("carousel__main-text");
         setSubTextAnimation("carousel__sub-text");
         setBtnAnimation("carousel__btn");
-      }, 6500)
+      }, 6900)
     );
   };
 
@@ -82,10 +82,6 @@ export default function Carousel() {
       clearInterval(interval);
     };
   }, [index]);
-
-  // useEffect(() => {
-  //   setAnimation(animation);
-  // }, [index]);
 
   return (
     <div className="carousel">
