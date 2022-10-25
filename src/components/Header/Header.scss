@@ -4,25 +4,38 @@
   height: 7rem;
   background: rgba(21, 20, 18, 1);
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   top: 0;
   left: 0;
   position: fixed;
+
+  &--scroll {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    background: rgba(21, 20, 18, 0.9);
+    width: 100%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
 
   &__logo {
     display: flex;
     align-items: center;
     color: #fff;
-    margin-left: 1rem;
-    font-size: 2rem;
+    margin: 1rem;
+    // height: 80%;
   }
   &__ham-menu {
     height: 100%;
     width: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 1rem;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    margin: 0 1rem 1rem 0;
   }
 
   &__top-line,
