@@ -1,0 +1,40 @@
+.mission {
+  background: #151412;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 1rem;
+
+  &__sub-heading {
+    color: #c7a17a;
+    font-size: 1.75rem;
+    font-style: italic;
+    padding-bottom: 0.25rem;
+    font-weight: 400;
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: 3.25rem;
+
+    &-italic {
+      font-style: italic;
+    }
+  }
+
+  &__statement {
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-size: 1.25rem;
+    margin: 1rem;
+  }
+
+  &__divider {
+    margin-top: -1rem;
+    width: 90%;
+    height: 100px;
+  }
+}

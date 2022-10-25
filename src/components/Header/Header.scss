@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   position: fixed;
+  transition: 0.25s ease-in;
 
   &--scroll {
     display: flex;
@@ -19,6 +20,7 @@
     top: 0;
     left: 0;
     position: fixed;
+    transition: 1s ease-in;
   }
 
   &__logo {

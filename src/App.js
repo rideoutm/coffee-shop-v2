@@ -3,6 +3,8 @@ import Header from "./components/Header/Header";
 import Modal from "./components/Modal/Modal";
 import { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
+import Mission from "./components/Mission/Mission";
+import Video from "./components/Video/Video";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -17,6 +19,8 @@ function App() {
       <Header handleModal={handleModal} />
       <Carousel />
       <Modal showModal={showModal} />
+      <Mission />
+      <Video />
     </>
   );
 }

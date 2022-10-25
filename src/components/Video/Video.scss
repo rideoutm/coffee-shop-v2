@@ -1,0 +1,65 @@
+.video {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 22;
+  }
+  &__player {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    object-fit: cover;
+    color: #fff;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    color: #fff;
+    padding: 0 1rem;
+
+    &-top {
+      font-size: 1.25rem;
+      margin-top: 5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      word-spacing: 3px;
+    }
+
+    &-mid {
+      font-size: 3rem;
+      padding-bottom: 2rem;
+
+      &-italic {
+        font-style: italic;
+      }
+    }
+
+    &-hr {
+      width: 80px;
+      margin: 0 auto 2rem auto;
+      background: #fff;
+      border: 1px solid #fff;
+    }
+
+    &-bottom {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+}
