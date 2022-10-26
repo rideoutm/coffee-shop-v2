@@ -5,6 +5,7 @@ import { useState } from "react";
 import Carousel from "./components/Carousel/Carousel";
 import Mission from "./components/Mission/Mission";
 import Video from "./components/Video/Video";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <Modal showModal={showModal} />
       <Mission />
       <Video />
+      <Menu />
     </>
   );
 }
