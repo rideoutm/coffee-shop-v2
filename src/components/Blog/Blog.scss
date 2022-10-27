@@ -1,0 +1,94 @@
+@use "../../../styles/global.scss" as *;
+
+.blog {
+  box-sizing: border-box;
+  padding: 0 1rem;
+
+  color: #000;
+
+  &__title-img {
+    padding: 3rem 0 1rem 0;
+    width: 100%;
+  }
+
+  &__info-author,
+  &__info-date,
+  &__article-title {
+    color: #c7a17a;
+  }
+
+  &__article-title {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  &__article-para {
+    margin: 1rem 0;
+  }
+
+  &__end-line {
+    background: #c7a17a;
+    border: 1px solid #c7a17a;
+    margin: 3rem 0;
+  }
+
+  &__author {
+    &-about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+
+    &-name {
+      align-self: flex-start;
+      color: #c7a17a;
+      font-size: 2rem;
+      margin: 1rem 0 1rem 0;
+    }
+
+    &-desc {
+      line-height: 1.5rem;
+    }
+
+    &-btm-hr {
+      background: #c7a17a;
+      border: 1px solid #c7a17a;
+      margin-top: 2rem;
+    }
+  }
+
+  &__comments {
+    margin-top: 2rem;
+    &-header {
+      font-size: 2rem;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    margin: 1rem 0;
+
+    &-img {
+      margin-right: 1rem;
+      &-pic {
+        border-radius: 50%;
+      }
+    }
+
+    &-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &-date {
+      font-weight: 600;
+      margin: 0.25rem 0 1rem 0;
+    }
+  }
+}
