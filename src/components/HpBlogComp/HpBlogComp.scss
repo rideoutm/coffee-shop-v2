@@ -1,0 +1,86 @@
+@use "../../../styles/global.scss" as *;
+@use "../../../styles/partials/typography" as *;
+
+.homepage-blog {
+  background: #151412;
+
+  //   url("../../Data/imgs/pexels-marta-dzedyshko-2067431.jpg") center /
+  //     cover no-repeat;
+  //   height: 700px;
+  width: 100%;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  //   &::after {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     content: "";
+  //     background: rgba(0, 0, 0, 0.8);
+  //     z-index: 1;
+  //   }
+
+  &__header {
+    font-family: "Marcellus", serif;
+    text-align: center;
+    position: relative;
+    z-index: 22;
+    font-size: 2.5rem;
+    color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__item {
+    z-index: 22;
+    margin: 0 1rem;
+    margin-bottom: 3rem;
+
+    &-img {
+      width: 100%;
+    }
+
+    &-img-pic {
+      width: 100%;
+    }
+
+    &-title {
+      color: #fff;
+      margin: 2rem 0;
+      font-size: 2.25rem;
+      //   font-family: "Marcellus", serif;
+    }
+
+    &-desc {
+      color: #fff;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    background: none;
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    transition: 0.25s ease-in;
+    font-weight: 400;
+
+    &:hover {
+      transition: 0.25s ease-in;
+      border-top: 1px solid rgba(225, 255, 255, 1);
+      border-bottom: 1px solid rgba(225, 255, 255, 1);
+      background: none;
+    }
+  }
+}

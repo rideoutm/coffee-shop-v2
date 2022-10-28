@@ -7,6 +7,7 @@ import Mission from "./components/Mission/Mission";
 import Video from "./components/Video/Video";
 import Menu from "./components/Menu/Menu";
 import Blog from "./components/Blog/Blog";
+import HpBlogComp from "./components/HpBlogComp/HpBlogComp";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -22,9 +23,9 @@ function App() {
       <Carousel />
       <Modal showModal={showModal} />
       <Mission />
+      <HpBlogComp />
       <Video />
       <Menu />
-      <Blog />
     </>
   );
 }

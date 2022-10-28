@@ -1,7 +1,7 @@
 import "./Blog.scss";
 import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
-import placeholderImg from "../../Data/imgs/commentPlaceholder.png";
+import Comment from "./Comment/Comment";
 
 export default function Blog() {
   return (
@@ -67,28 +67,8 @@ export default function Blog() {
             <hr className="blog__author-btm-hr" />
           </div>
         </div>
-        <div className="blog__comments">
-          <h2 className="blog__comments-header"># Comments</h2>
-          <div className="blog__comment">
-            <div className="blog__comment-img">
-              <img
-                className="blog__comment-img-pic"
-                src={placeholderImg}
-                alt="Comment placeholder image"
-              />
-            </div>
-            <div className="blog__comment-right">
-              <div className="blog__comment-name">
-                {String("Ed Doe").toUpperCase()}
-              </div>
-              <div className="blog__comment-date">10/27/2022 4:30pm</div>
-              <div className="blog__comment-comment">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Deleniti officia dolore perspiciatis sed veniam? Autem?
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <Comment />
       </div>
     </div>
   );

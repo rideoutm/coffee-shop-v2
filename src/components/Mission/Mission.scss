@@ -12,15 +12,17 @@
     font-style: italic;
     padding-bottom: 0.25rem;
     font-weight: 400;
+    font-family: "Marcellus", serif;
   }
 
   &__heading {
     color: #fff;
-    font-size: 3.25rem;
+    font-size: 3rem;
+    font-family: "Marcellus", serif;
 
-    &-italic {
-      font-style: italic;
-    }
+    // &-italic {
+    //   font-style: italic;
+    // }
   }
 
   &__statement {
@@ -36,5 +38,10 @@
     margin-top: -1rem;
     width: 90%;
     height: 100px;
+  }
+
+  &__hr {
+    border: 1px solid #c7a17a;
+    width: 50%;
   }
 }
