@@ -8,6 +8,8 @@ import Video from "./components/Video/Video";
 import Menu from "./components/Menu/Menu";
 import Blog from "./components/Blog/Blog";
 import HpBlogComp from "./components/HpBlogComp/HpBlogComp";
+import ReviewCarousel from "./components/ReviewCarousel/ReviewCarousel";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -26,6 +28,9 @@ function App() {
       <HpBlogComp />
       <Video />
       <Menu />
+      <ReviewCarousel />
+
+      <Footer />
     </>
   );
 }

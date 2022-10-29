@@ -13,15 +13,15 @@ export default function Video() {
         />{" "}
       </video>
       <div className="video__text">
-        <div className="video__text-top">
-          ONLY THE HIGHEST QUALITY <p>COFFEE BEANS</p>
-        </div>
+        <div className="video__text-top">Helping Farmers</div>
         <div className="video__text-mid">
-          Explore <span className="video__text-mid-italic">Variety</span>
+          ETHICALLY <br /> SOURCED BEANS
         </div>
         <hr className="video__text-hr" />
         <div className="video__text-bottom">
-          We only source our beans from free trade, family owned farms
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+          perferendis, culpa odit dignissimos magni, itaque iure nostrum
+          obcaecati voluptatum perspiciatis quos.
         </div>
       </div>
     </div>
