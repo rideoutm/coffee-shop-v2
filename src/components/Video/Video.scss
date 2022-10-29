@@ -1,6 +1,12 @@
+@use "../../../styles/global.scss" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/utilities" as *;
+@use "../../../styles/partials/mixins" as *;
+
 .video {
   position: relative;
   height: 70vh;
+  font-family: "nunito sans";
 
   &::after {
     position: absolute;
@@ -60,6 +66,12 @@
       padding-top: 1rem;
       font-size: 1.25rem;
       // text-align: center;
+    }
+  }
+
+  @include tablet {
+    &__text {
+      padding: 0 4rem;
     }
   }
 }

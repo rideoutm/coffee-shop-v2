@@ -1,28 +1,17 @@
 @use "../../../styles/global.scss" as *;
 @use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/utilities" as *;
+@use "../../../styles/partials/mixins" as *;
 
 .homepage-blog {
   background: #151412;
-
-  //   url("../../Data/imgs/pexels-marta-dzedyshko-2067431.jpg") center /
-  //     cover no-repeat;
-  //   height: 700px;
   width: 100%;
   background-attachment: fixed;
   position: relative;
   display: flex;
   flex-direction: column;
-
-  //   &::after {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     content: "";
-  //     background: rgba(0, 0, 0, 0.8);
-  //     z-index: 1;
-  //   }
+  font-family: "nunito sans";
+  z-index: 10;
 
   &__header {
     font-family: "Marcellus", serif;
@@ -52,7 +41,7 @@
       color: #fff;
       margin: 2rem 0;
       font-size: 2.25rem;
-      //   font-family: "Marcellus", serif;
+      line-height: 35px;
     }
 
     &-desc {
@@ -81,6 +70,15 @@
       border-top: 1px solid rgba(225, 255, 255, 1);
       border-bottom: 1px solid rgba(225, 255, 255, 1);
       background: none;
+    }
+  }
+
+  @include tablet {
+    flex-direction: row;
+    padding: 0 4rem;
+
+    &__item {
+      width: 30%;
     }
   }
 }
