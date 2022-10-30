@@ -1,12 +1,51 @@
 import "./Menu.scss";
+import { useState, useRef, useEffect } from "react";
 
 export default function Menu() {
+  const [firstMenuAnim, setFirstMenuAnim] = useState();
+  const [secondMenuAnim, setSecondMenuAnim] = useState();
+
+  const firstRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setFirstMenuAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer.unobserve(firstRef.current);
+        }
+      },
+      { threshold: 0.7 }
+    );
+
+    observer.observe(firstRef.current);
+  }, []);
+
+  useEffect(() => {
+    const observer2 = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setSecondMenuAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer2.unobserve(firstRef.current);
+        }
+      },
+      { threshold: 0.7 }
+    );
+
+    observer2.observe(firstRef.current);
+  }, []);
+
   return (
     <div className="menu">
       <h3 className="menu__sub-header">Our</h3>
       <h2 className="menu__header">MENU</h2>
       <div className="menu__container">
-        <div className="menu__first">
+        <div
+          ref={firstRef}
+          className={firstMenuAnim ? "menu__first--anim" : "menu__first"}
+        >
           <div className="menu__item">
             <div className="menu__item-title">CAFE AMERICANO</div>
             <div className="menu__item-desc">
@@ -39,7 +78,10 @@ export default function Menu() {
             </div>
           </div>
         </div>
-        <div className="menu__second">
+        <div
+          ref={firstRef}
+          className={secondMenuAnim ? "menu__second--anim" : "menu__second"}
+        >
           <div className="menu__item">
             <div className="menu__item-title">CAFE AMERICANO</div>
             <div className="menu__item-desc">
