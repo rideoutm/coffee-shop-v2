@@ -83,31 +83,31 @@ export default function Menu() {
           className={secondMenuAnim ? "menu__second--anim" : "menu__second"}
         >
           <div className="menu__item">
-            <div className="menu__item-title">CAFE AMERICANO</div>
+            <div className="menu__item-title">ICED CAFE AMERICANO</div>
             <div className="menu__item-desc">
               Espresso topped with hot water
             </div>
           </div>
           <div className="menu__item">
-            <div className="menu__item-title">CAPPUCINO</div>
+            <div className="menu__item-title">ICED CAPPUCINO</div>
             <div className="menu__item-desc">
               Espresso topped with milk foam
             </div>
           </div>
           <div className="menu__item">
-            <div className="menu__item-title">ESPRESSO</div>
+            <div className="menu__item-title">ICED ESPRESSO</div>
             <div className="menu__item-desc">
               Signature espresso shot with robust flavor
             </div>
           </div>
           <div className="menu__item">
-            <div className="menu__item-title">CAFE LATTE</div>
+            <div className="menu__item-title">ICED CAFE LATTE</div>
             <div className="menu__item-desc">
               Signature espresso with milk, topped with foam
             </div>
           </div>
           <div className="menu__item">
-            <div className="menu__item-title">CARAMEL MACCHIATO</div>
+            <div className="menu__item-title">ICED CARAMEL MACCHIATO</div>
             <div className="menu__item-desc">
               Signature espresso, steamed milk and vanilla syrup topped with
               caramel.
