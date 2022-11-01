@@ -30,6 +30,19 @@
     text-align: center;
   }
 
+  &__logo {
+    transition: 0.25s ease-in;
+    filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(284deg)
+      brightness(111%) contrast(100%);
+    width: 70vw;
+    margin: -2.5rem 0;
+
+    &:hover {
+      transition: 0.25s ease-in;
+      filter: invert(96%) sepia(6%) saturate(3764%) hue-rotate(311deg)
+        brightness(80%) contrast(93%);
+    }
+  }
   //   &__left-desc {
   //   }
 }
