@@ -10,6 +10,7 @@ import Blog from "./components/Blog/Blog";
 import HpBlogComp from "./components/HpBlogComp/HpBlogComp";
 import ReviewCarousel from "./components/ReviewCarousel/ReviewCarousel";
 import Footer from "./components/Footer/Footer";
+import Partners from "./components/Partners/Partners";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +30,7 @@ function App() {
       <Video />
       <Menu />
       <ReviewCarousel />
-
+      <Partners />
       <Footer />
     </>
   );

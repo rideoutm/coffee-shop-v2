@@ -24,10 +24,17 @@ export default function Video() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
             perferendis, culpa odit dignissimos magni, itaque iure nostrum
             obcaecati voluptatum perspiciatis quos.
+            <div className="video__img-cont-mobi">
+              <img
+                className="video__img-mobi"
+                src={videoPic}
+                alt="coffee bean"
+              />
+            </div>
           </div>
         </div>
         <div className="video__img-cont">
-          <img className="video__img" src={videoPic} alt="coffee on a table" />
+          <img className="video__img" src={videoPic} alt="coffee bean" />
         </div>
       </div>
     </div>

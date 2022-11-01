@@ -5,7 +5,7 @@
 
 .video {
   position: relative;
-  height: 100vh;
+  height: 700px;
   font-family: "nunito sans";
 
   &::after {
@@ -66,20 +66,26 @@
       padding-top: 1rem;
       font-size: 1.25rem;
       width: 100%;
-      // text-align: center;
     }
+  }
 
-    &__img-cont {
-      height: 30%;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  &__img-cont-mobi {
+    margin-bottom: -2rem;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+  }
 
-    &__img {
-      height: 30%;
-    }
+  &__img-mobi {
+    height: 300px;
+  }
+
+  &__img-cont {
+    display: none;
+  }
+
+  &__img {
+    height: 200px;
   }
 
   @include tablet {
@@ -93,6 +99,10 @@
     &__text,
     &__img-cont {
       width: 50%;
+    }
+
+    &__img-cont-mobi {
+      display: none;
     }
 
     &__img-cont {
@@ -122,6 +132,7 @@
 
     &__img {
       height: 70%;
+      // width: 100%;
       // left: 10%;
       // top: 20%;
     }

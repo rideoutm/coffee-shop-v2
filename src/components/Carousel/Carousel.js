@@ -63,12 +63,11 @@ export default function Carousel() {
         setSubTextAnimation("carousel__sub-text--anim");
         setBtnAnimation("carousel__btn--anim");
       }, 500),
-      setTimeout(() => stateReset(), 6900)
+      setTimeout(() => stateReset(), 4900)
     );
   };
 
   const carouselScroll = () => {
-    console.log(index);
     if (index === slideData.length - 1) {
       return setIndex(0), handleAnimTimeOutIndexReset();
     }
@@ -83,9 +82,10 @@ export default function Carousel() {
   };
 
   useEffect(() => {
+    handleAnimTimeOutIndexReset();
     const interval = setInterval(() => {
       carouselScroll();
-    }, 7000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);

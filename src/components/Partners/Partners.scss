@@ -1,0 +1,35 @@
+@use "../../../styles/global.scss" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/utilities" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #151412;
+  font-family: "nunito sans";
+  color: #fff;
+  padding: 4rem 1rem 0 1rem;
+
+  &__left,
+  &__right {
+    width: 100%;
+  }
+
+  &__left-sub-heading {
+    color: #c7a17a;
+    font-size: 1.75rem;
+    font-style: italic;
+    text-align: center;
+  }
+  &__left-heading {
+    font-size: 3rem;
+    font-family: "marcellus", serif;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  //   &__left-desc {
+  //   }
+}
