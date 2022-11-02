@@ -1,3 +1,8 @@
+@use "../../../styles/global.scss" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/utilities" as *;
+@use "../../../styles/partials/mixins" as *;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,14 +14,15 @@
   left: 0;
   position: fixed;
   transition: 0.25s ease-in;
+  font-family: "nunito sans";
 
   &--scroll {
     display: flex;
     justify-content: space-between;
     height: 7rem;
-    background: rgba(21, 20, 18, 0.9);
+    background: rgba(21, 20, 18, 0.95);
     width: 100%;
-    z-index: 20;
+    z-index: 50;
     top: 0;
     left: 0;
     position: fixed;
@@ -35,8 +41,8 @@
     width: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 1rem;
+    justify-content: center;
+
     margin: 0 1rem 1rem 0;
   }
 
@@ -49,5 +55,56 @@
 
   &__mid-line {
     margin: 0.75rem 0;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  @include tablet {
+    &__ham-menu {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 1.75rem;
+      padding-right: 3.5rem;
+
+      &-item {
+        padding-left: 1.25rem;
+
+        &--anim {
+          --thickness: 2px;
+          --strike: 0;
+
+          background: linear-gradient(90deg, transparent, currentColor 0)
+            no-repeat right center / calc(var(--strike) * 100%) var(--thickness);
+
+          transition: background-size 0.4s ease;
+          padding: 0 0.2em;
+
+          &:hover {
+            --strike: 1; /* "1" means "true" (show the strike line) */
+            background-position-x: left;
+          }
+        }
+      }
+    }
+
+    &__menu-img {
+      margin-bottom: -0.25rem;
+      height: 25px;
+      filter: invert(100%) sepia(99%) saturate(15%) hue-rotate(241deg)
+        brightness(104%) contrast(100%);
+    }
+  }
+
+  @include desktop {
+    &__menu-item {
+      padding-left: 2rem;
+    }
   }
 }

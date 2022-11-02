@@ -1,5 +1,8 @@
 import "./Header.scss";
-import coffeeshoplogo from "../../Data/imgs/COFFEESHOPLOGO2.png";
+import coffeeshoplogo from "../../Data/imgs/logo.png";
+import facebook from "../../Data/imgs/square-facebook.svg";
+import twitter from "../../Data/imgs/twitter.svg";
+import instagram from "../../Data/imgs/instagram.svg";
 
 import { useState, useEffect } from "react";
 
@@ -23,6 +26,36 @@ export default function Header({ handleModal }) {
     <div className={!headerState ? "header" : "header--scroll"}>
       <div className="header__logo">
         <img src={coffeeshoplogo} alt="logo"></img>
+      </div>
+      <div className="header__menu">
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">HOME</span>
+        </div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">MENU</span>
+        </div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">BLOG</span>
+        </div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">SHOP</span>
+        </div>
+        <div className="header__menu-item">|</div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">
+            <img className="header__menu-img" src={facebook} alt="facebook" />
+          </span>
+        </div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">
+            <img className="header__menu-img" src={twitter} alt="twitter" />
+          </span>
+        </div>
+        <div className="header__menu-item">
+          <span className="header__menu-item--anim">
+            <img className="header__menu-img" src={instagram} alt="instagram" />
+          </span>
+        </div>
       </div>
       <div onClick={() => handleModal()} className="header__ham-menu">
         <div className="header__top-line"></div>

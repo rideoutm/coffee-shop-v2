@@ -91,4 +91,10 @@
       padding: 4rem 7rem 0 7rem;
     }
   }
+
+  @include desktop {
+    &__main-cont {
+      padding: 4rem 30rem 0 30rem;
+    }
+  }
 }

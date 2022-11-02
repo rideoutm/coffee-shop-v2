@@ -54,4 +54,8 @@
   @include tablet {
     padding: 5rem 4rem 2rem 4rem;
   }
+
+  @include desktop {
+    padding: 5rem 30rem 2rem 30rem;
+  }
 }

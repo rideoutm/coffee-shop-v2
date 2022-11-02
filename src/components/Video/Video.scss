@@ -137,4 +137,22 @@
       // top: 20%;
     }
   }
+
+  @include desktop {
+    // &__container {
+    //   padding: 0 20rem;
+    // }
+
+    &__text {
+      padding-left: 12rem;
+    }
+
+    &__img-cont {
+      width: 50%;
+    }
+
+    &__img {
+      height: 80%;
+    }
+  }
 }
