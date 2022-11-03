@@ -1,20 +1,18 @@
-import "./Blog.scss";
-import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
-import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
-import Comment from "./Comment/Comment";
+import "./blog.scss";
+import arabica from "../../Data/imgs/nathan-dumlao-KixfBEdyp64-unsplash.jpg";
+import Joe from "../../Data/imgs/JoeF.jpg";
 
-export default function Blog() {
+export default function Arabica() {
   return (
     <div className="blog">
-      <img className="blog__title-img" src={titleImg} alt="title image" />
+      <img className="blog__title-img" src={arabica} alt="title image" />
 
       <div className="blog__info">
-        by <span className="blog__info-author">Author</span> |{" "}
-        <span className="blog__info-date"> 10/27/2022</span>
+        by <span className="blog__info-author">Joe Frazer</span> |
+        <span className="blog__info-date"> 10/23/2022</span>
       </div>
       <div className="blog__article">
-        <h2 className="blog__article-title">PERCOLATE</h2>
-
+        <h2 className="blog__article-title">ARABICA</h2>
         <div className="blog__article-content">
           <p className="blog__article-para">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
@@ -52,14 +50,13 @@ export default function Blog() {
           </p>
         </div>
         <hr className="blog__end-line" />
-
         <div className="blog__author-about">
           <img
             className="blog__author-img"
-            src={authorImg}
+            src={Joe}
             alt="image of author"
           />
-          <h3 className="blog__author-name">JANE DOE</h3>
+          <h3 className="blog__author-name">Joe Frazer</h3>
           <div className="blog__author-desc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
             alias quae. Commodi perspiciatis nisi quis deserunt, laudantium ipsa
@@ -67,9 +64,7 @@ export default function Blog() {
             <hr className="blog__author-btm-hr" />
           </div>
         </div>
-
-        <Comment />
+        <Comment blogData={blogData} />
       </div>
     </div>
-  );
-}
+  )

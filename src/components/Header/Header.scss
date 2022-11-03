@@ -25,6 +25,7 @@
     z-index: 50;
     top: 0;
     left: 0;
+    font-family: "nunito sans";
     position: fixed;
     transition: 1s ease-in;
   }
@@ -74,7 +75,7 @@
       padding-right: 3.5rem;
 
       &-item {
-        padding-left: 1.25rem;
+        padding-left: 1rem;
 
         &--anim {
           --thickness: 2px;
@@ -84,11 +85,11 @@
             no-repeat right center / calc(var(--strike) * 100%) var(--thickness);
 
           transition: background-size 0.4s ease;
-          padding: 0 0.2em;
 
           &:hover {
             --strike: 1; /* "1" means "true" (show the strike line) */
             background-position-x: left;
+            cursor: pointer;
           }
         }
       }

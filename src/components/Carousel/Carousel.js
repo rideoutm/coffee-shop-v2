@@ -36,7 +36,7 @@ const slideData = [
   },
 ];
 
-export default function Carousel() {
+export default function Carousel({ smoothScrollRef }) {
   const [index, setIndex] = useState(0);
   const [logo, setLogo] = useState("carousel__logo--anim");
   const [animation, setAnimation] = useState("carousel__main-text--anim");
@@ -92,6 +92,11 @@ export default function Carousel() {
     };
   }, [index]);
 
+  // Smooth scroll on click
+  const clickScroll = () => {
+    window.scrollTo({ top: 850, behavior: "smooth" });
+  };
+
   return (
     <div className="carousel">
       {slideData.map((el, i) => {
@@ -112,7 +117,9 @@ export default function Carousel() {
               </div>
 
               <div className={subTextAnimation}>{el.subtext}</div>
-              <button className={btnAnimation}>READ MORE</button>
+              <button onClick={() => clickScroll()} className={btnAnimation}>
+                READ MORE
+              </button>
             </div>
           </div>
         );
