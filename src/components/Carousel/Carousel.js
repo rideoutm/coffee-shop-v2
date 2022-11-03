@@ -94,7 +94,7 @@ export default function Carousel({ smoothScrollRef }) {
 
   // Smooth scroll on click
   const clickScroll = () => {
-    window.scrollTo({ top: 850, behavior: "smooth" });
+    smoothScrollRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
