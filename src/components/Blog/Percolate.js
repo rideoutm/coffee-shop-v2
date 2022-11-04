@@ -68,6 +68,37 @@ export default function Blog() {
           </div>
         </div>
         <Comment blogData={blogData} />
+        <div>
+          <h2 className="blog__form-header">POST A COMMENT</h2>
+          <form action="">
+            <label htmlFor="name"></label>
+            <input
+              className="blog__form-name"
+              id="name"
+              type="text"
+              placeholder="Name"
+            />
+            <label htmlFor="email"></label>
+            <input
+              className="blog__form-email"
+              id="email"
+              type="text"
+              placeholder="Email"
+            />
+            <label htmlFor="comment"></label>
+            <textarea
+              className="blog__form-comment"
+              name=""
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Comment"
+            ></textarea>
+            <button className="blog__form-btn" type="submit">
+              SUBMIT
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
