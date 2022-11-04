@@ -2,11 +2,11 @@ import "./Blog.scss";
 import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
 import Comment from "./Comment/Comment";
-import related from "../../Data/imgs/related.jpg";
 
 import { useState } from "react";
 
 import blogData from "../../Data/BlogData/BlogData.json";
+import Related from "./Related/Related";
 
 export default function Blog() {
   const [nameState, setNameState] = useState(0);
@@ -128,53 +128,9 @@ export default function Blog() {
               SUBMIT
             </button>
           </form>
-          <div className="blog__related">
-            <h2 className="blog__related-header">RELATED</h2>
-            <div className="blog__related-item">
-              <div className="blog__related-img-cont">
-                <img className="blog__related-item-img" src={related} alt="" />
-              </div>
-              <div className="blog__related-info">
-                <div className="blog__related-info-title">
-                  <h4>TITLE NAME</h4>
-                </div>
-                <div className="blog__related-info-desc">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </div>
-              </div>
-            </div>
-            <div className="blog__related-item">
-              <div className="blog__related-img-cont">
-                <img className="blog__related-item-img" src={related} alt="" />
-              </div>
-              <div className="blog__related-info">
-                <div className="blog__related-info-title">
-                  <h4>TITLE NAME</h4>
-                </div>
-                <div className="blog__related-info-desc">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </div>
-              </div>
-            </div>
-            <div className="blog__related-item">
-              <div className="blog__related-img-cont">
-                <img className="blog__related-item-img" src={related} alt="" />
-              </div>
-              <div className="blog__related-info">
-                <div className="blog__related-info-title">
-                  <h4>TITLE NAME</h4>
-                </div>
-                <div className="blog__related-info-desc">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <Related />
     </div>
   );
 }
