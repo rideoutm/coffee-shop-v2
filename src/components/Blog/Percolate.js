@@ -2,10 +2,34 @@ import "./Blog.scss";
 import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
 import Comment from "./Comment/Comment";
+import related from "../../Data/imgs/related.jpg";
+
+import { useState } from "react";
 
 import blogData from "../../Data/BlogData/BlogData.json";
 
 export default function Blog() {
+  const [nameState, setNameState] = useState(0);
+  const [emailState, setEmailState] = useState(0);
+  const [commentState, setCommentState] = useState(0);
+
+  const [nameClassState, setNameClassState] = useState("blog__form-name");
+  const [emailClassState, setEmailClassState] = useState("blog__form-email");
+  const [commentClassState, setCommentClassState] =
+    useState("blog__form-comment");
+
+  const handleFormValidation = () => {
+    if (
+      nameState.length < 2 ||
+      emailState.length < 2 ||
+      commentState.length < 2
+    )
+      setNameClassState("blog__form-name--invalid");
+    setEmailClassState("blog__form-name--invalid");
+    setCommentClassState("blog__form-name--invalid");
+    return;
+  };
+
   return (
     <div className="blog">
       <img className="blog__title-img" src={titleImg} alt="title image" />
@@ -73,10 +97,14 @@ export default function Blog() {
           <form action="">
             <label htmlFor="name"></label>
             <input
-              className="blog__form-name"
+              className={
+                nameState < 2 ? "blog__form-name--invalid" : "blog__form-name"
+              }
               id="name"
               type="text"
               placeholder="Name"
+              // value={nameState}
+              onChange={() => setNameState(nameState + 1)}
             />
             <label htmlFor="email"></label>
             <input
@@ -84,6 +112,7 @@ export default function Blog() {
               id="email"
               type="text"
               placeholder="Email"
+              onChange={() => setEmailState(emailState + 1)}
             />
             <label htmlFor="comment"></label>
             <textarea
@@ -93,11 +122,57 @@ export default function Blog() {
               cols="30"
               rows="10"
               placeholder="Comment"
+              onChange={() => setCommentState(commentState + 1)}
             ></textarea>
             <button className="blog__form-btn" type="submit">
               SUBMIT
             </button>
           </form>
+          <div className="blog__related">
+            <h2 className="blog__related-header">RELATED</h2>
+            <div className="blog__related-item">
+              <div className="blog__related-img-cont">
+                <img className="blog__related-item-img" src={related} alt="" />
+              </div>
+              <div className="blog__related-info">
+                <div className="blog__related-info-title">
+                  <h4>TITLE NAME</h4>
+                </div>
+                <div className="blog__related-info-desc">
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </div>
+              </div>
+            </div>
+            <div className="blog__related-item">
+              <div className="blog__related-img-cont">
+                <img className="blog__related-item-img" src={related} alt="" />
+              </div>
+              <div className="blog__related-info">
+                <div className="blog__related-info-title">
+                  <h4>TITLE NAME</h4>
+                </div>
+                <div className="blog__related-info-desc">
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </div>
+              </div>
+            </div>
+            <div className="blog__related-item">
+              <div className="blog__related-img-cont">
+                <img className="blog__related-item-img" src={related} alt="" />
+              </div>
+              <div className="blog__related-info">
+                <div className="blog__related-info-title">
+                  <h4>TITLE NAME</h4>
+                </div>
+                <div className="blog__related-info-desc">
+                  {" "}
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
