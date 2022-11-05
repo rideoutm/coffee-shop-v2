@@ -1,15 +1,12 @@
+@use "../../../../styles/global.scss" as *;
+@use "../../../../styles/partials/typography" as *;
+@use "../../../../styles/partials/utilities" as *;
+@use "../../../../styles/partials/mixins" as *;
+
 .related {
+  margin-bottom: 2rem;
+
   &__item {
-    margin-top: 2rem;
-    display: flex;
-  }
-
-  &__header {
-    font-family: "marcellus", serif;
-    margin-bottom: 1rem;
-  }
-
-  &__related-item {
     display: flex;
     width: 100%;
     margin: 1rem 0;
@@ -19,6 +16,10 @@
     }
   }
 
+  &__header {
+    font-family: "marcellus", serif;
+    margin-bottom: 1rem;
+  }
   &__img-cont {
     width: 60%;
   }
@@ -36,6 +37,74 @@
       margin-top: auto;
       padding-bottom: 0.25rem;
       line-height: 20px;
+    }
+  }
+
+  &__categories-header,
+  &__tags-header {
+    font-family: "marcellus", serif;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  &__list {
+    list-style-type: none;
+    font-family: "nunito sans";
+
+    // &-item: rem 0;
+    // }
+  }
+
+  &__tags {
+    font-family: "nunito sans";
+  }
+
+  @include tablet {
+    margin-left: 3rem;
+
+    &__header {
+      margin-bottom: 1rem;
+    }
+
+    &__img-cont {
+      width: 50%;
+    }
+
+    &__info {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      &-desc {
+        padding-bottom: 0.25rem;
+        line-height: 20px;
+        margin-top: 0;
+      }
+
+      &-title-header {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+    }
+    &__list-item {
+      margin: 0.5rem 0;
+    }
+
+    &__tags {
+      width: 60%;
+    }
+  }
+
+  @include desktop {
+    margin-top: 7rem;
+
+    &__img-cont {
+      width: 50%;
+    }
+
+    &__header {
+      font-size: 2rem;
+      //   margin-top: -0.75rem;
+      margin-bottom: 2rem;
     }
   }
 }
