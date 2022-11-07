@@ -4,7 +4,9 @@ import placeholderImg from "../../../Data/imgs/commentPlaceholder.png";
 export default function Comment({ blogData }) {
   return (
     <div className="comments">
-      <h2 className="comments__header">{blogData.length} COMMENTS</h2>
+      <h2 className="comments__header">
+        {blogData[0].comments.length} COMMENTS
+      </h2>
       {/* Create JSON file with data for each blog post, map comments to comment section, swap out placeholder data */}
 
       {blogData[0].comments.map((el) => {

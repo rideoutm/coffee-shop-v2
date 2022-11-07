@@ -68,7 +68,7 @@ export default function Blog({ blogData }) {
               <hr className="blog__author-btm-hr" />
             </div>
           </div>
-          <Comment blogData={blogData} />
+          <Comment blogData={blogArray} />
           <div>
             <h2 className="blog__form-header">POST A COMMENT</h2>
             <form action="">
