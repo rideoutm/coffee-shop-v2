@@ -3,10 +3,12 @@ import blog1 from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import blog2 from "../../Data/imgs/nathan-dumlao-KixfBEdyp64-unsplash.jpg";
 import blog3 from "../../Data/imgs/image3.jpg";
 
-export default function HpBlogComp() {
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+export default function HpBlogComp({ blogData }) {
   return (
     <div className="homepage-blog">
-      {/* <h2 className="homepage-blog__header">THE COFFEE BLOG</h2> */}
       <div className="homepage-blog__item">
         <div className="homepage-blog__item-img">
           <img
@@ -22,7 +24,9 @@ export default function HpBlogComp() {
           enim cupiditate quia molestiae dolor laborum animi sed dolorum porro
           numquam!
         </div>
-        <button className="homepage-blog__btn">READ MORE</button>
+        <Link to={`/blog/nv6lvipxkg`}>
+          <button className="homepage-blog__btn">READ MORE</button>
+        </Link>
       </div>
       <div className="homepage-blog__item">
         <div className="homepage-blog__item-img">
@@ -39,7 +43,9 @@ export default function HpBlogComp() {
           enim cupiditate quia molestiae dolor laborum animi sed dolorum porro
           numquam!
         </div>
-        <button className="homepage-blog__btn">READ MORE</button>
+        <Link to={`/blog/nfj123kag1`}>
+          <button className="homepage-blog__btn">READ MORE</button>
+        </Link>
       </div>
       <div className="homepage-blog__item">
         <div className="homepage-blog__item-img">
@@ -56,7 +62,9 @@ export default function HpBlogComp() {
           enim cupiditate quia molestiae dolor laborum animi sed dolorum porro
           numquam!
         </div>
-        <button className="homepage-blog__btn">READ MORE</button>
+        <Link to={`/blog/akl32xo7z0`}>
+          <button className="homepage-blog__btn">READ MORE</button>
+        </Link>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import twitter from "../../Data/imgs/twitter.svg";
 import instagram from "../../Data/imgs/instagram.svg";
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header({ handleModal }) {
   const [headerState, setHeaderState] = useState(false);
@@ -29,8 +30,12 @@ export default function Header({ handleModal }) {
       </div>
       <div className="header__menu">
         <div className="header__menu-item">
-          <span className="header__menu-item--anim">HOME</span>
+          <Link to="/">
+            {" "}
+            <span className="header__menu-item--anim">HOME</span>
+          </Link>
         </div>
+
         <div className="header__menu-item">
           <span className="header__menu-item--anim">MENU</span>
         </div>

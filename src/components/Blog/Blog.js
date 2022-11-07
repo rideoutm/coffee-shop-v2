@@ -2,12 +2,12 @@ import "./Blog.scss";
 // import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
 import Comment from "./Comment/Comment";
-import blogData from "./blogData.json";
 import Related from "./Related/Related";
 
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function Blog() {
+export default function Blog({ blogData }) {
   const [nameState, setNameState] = useState(0);
   const [emailState, setEmailState] = useState(0);
   const [commentState, setCommentState] = useState(0);
@@ -16,6 +16,9 @@ export default function Blog() {
   const [emailClassState, setEmailClassState] = useState("blog__form-email");
   const [commentClassState, setCommentClassState] =
     useState("blog__form-comment");
+
+  const { id } = useParams();
+  let blogArray;
 
   const handleFormValidation = () => {
     if (
@@ -29,38 +32,41 @@ export default function Blog() {
     return;
   };
 
+  // Filter JSON data to only the obj that matches the params.
+  blogArray = blogData.filter((obj) => obj.id === id);
+
   return (
     <div className="blog">
       <div className="blog__left">
         <img
           className="blog__title-img"
-          src={blogData[0].image}
+          src={blogArray[0].image}
           alt="title image"
         />
 
         <div className="blog__info">
-          by <span className="blog__info-author">{blogData[0].author}</span> |{" "}
-          <span className="blog__info-date"> {blogData[0].date}</span>
+          by <span className="blog__info-author">{blogArray[0].author}</span> |{" "}
+          <span className="blog__info-date"> {blogArray[0].date}</span>
         </div>
         <div className="blog__article">
-          <h2 className="blog__article-title">{blogData[0].title}</h2>
+          <h2 className="blog__article-title">{blogArray[0].title}</h2>
           <div className="blog__article-content">
-            <p className="blog__article-para">{blogData[0].para1}</p>
-            <p className="blog__article-para">{blogData[0].para2}</p>
-            <p className="blog__article-para">{blogData[0].para3}</p>
+            <p className="blog__article-para">{blogArray[0].para1}</p>
+            <p className="blog__article-para">{blogArray[0].para2}</p>
+            <p className="blog__article-para">{blogArray[0].para3}</p>
           </div>
           <hr className="blog__end-line" />
           <div className="blog__author-about">
             <img
               className="blog__author-img"
-              src={authorImg}
+              src={blogArray[0].authorImg}
               alt="image of author"
             />
-            <h3 className="blog__author-name">Meghan Smith</h3>
+            <h3 className="blog__author-name">{blogArray[0].author}</h3>
             <div className="blog__author-desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
               alias quae. Commodi perspiciatis nisi quis deserunt, laudantium
-              ipsa modi debitis?
+              ipsa modi debitis.
               <hr className="blog__author-btm-hr" />
             </div>
           </div>

@@ -5,7 +5,6 @@ import Carousel from "../components/Carousel/Carousel";
 import Mission from "../components/Mission/Mission";
 import Video from "../components/Video/Video";
 import Menu from "../components/Menu/Menu";
-import Blog from "../components/Blog/Percolate";
 import HpBlogComp from "../components/HpBlogComp/HpBlogComp";
 import ReviewCarousel from "../components/ReviewCarousel/ReviewCarousel";
 import Partners from "../components/Partners/Partners";
@@ -25,7 +24,6 @@ export default function Homepage({ showModal }) {
       <Menu />
       <ReviewCarousel />
       <Partners />
-      <Blog />
     </>
   );
 }
