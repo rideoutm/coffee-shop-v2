@@ -1,12 +1,11 @@
 import "./Blog.scss";
-import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
+// import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
 import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
 import Comment from "./Comment/Comment";
+import blogData from "./blogData.json";
+import Related from "./Related/Related";
 
 import { useState } from "react";
-
-import blogData from "../../Data/BlogData/BlogData.json";
-import Related from "./Related/Related";
 
 export default function Blog() {
   const [nameState, setNameState] = useState(0);
@@ -33,49 +32,22 @@ export default function Blog() {
   return (
     <div className="blog">
       <div className="blog__left">
-        <img className="blog__title-img" src={titleImg} alt="title image" />
+        <img
+          className="blog__title-img"
+          src={blogData[0].image}
+          alt="title image"
+        />
 
         <div className="blog__info">
-          by <span className="blog__info-author">Meghan Smith</span> |{" "}
-          <span className="blog__info-date"> 10/27/2022</span>
+          by <span className="blog__info-author">{blogData[0].author}</span> |{" "}
+          <span className="blog__info-date"> {blogData[0].date}</span>
         </div>
         <div className="blog__article">
-          <h2 className="blog__article-title">PERCOLATE</h2>
+          <h2 className="blog__article-title">{blogData[0].title}</h2>
           <div className="blog__article-content">
-            <p className="blog__article-para">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Blanditiis quis at quisquam! Obcaecati animi nisi, reiciendis
-              cumque maiores ea error provident suscipit quam quae non quia
-              iusto vero quas quod sed eaque neque architecto reprehenderit
-              deserunt a laudantium distinctio.
-            </p>
-            <p className="blog__article-para">
-              Doloremque consequuntur atque quas maiores odit ipsam perferendis.
-              Fugit, minima voluptatum quasi consequuntur, maiores vitae
-              assumenda quae, esse sed ex dolor rerum impedit placeat. Fugit
-              fuga a expedita doloremque sed, laboriosam at vero voluptate quod,
-              ad ab exercitationem facere qui, delectus non enim placeat odit.
-              Beatae ullam expedita vel, perspiciatis quam nobis eius corrupti.
-              Aut quia nam dignissimos voluptatibus nemo quaerat earum, magnam
-              voluptatum consectetur pariatur et numquam, ullam odio.{" "}
-            </p>{" "}
-            <p className="blog__article-para">
-              {" "}
-              Vitae hic quibusdam illum, fuga totam necessitatibus modi,
-              voluptate aperiam veritatis minima ratione labore doloremque quod
-              iusto debitis, velit perferendis praesentium! Dolores reiciendis
-              ut similique doloribus aut numquam eligendi ad ipsam repudiandae
-              et fugiat enim ea, fugit dignissimos dolore perspiciatis
-              accusantium. Dignissimos minus, repudiandae modi quia quae hic
-              enim debitis accusamus delectus facilis doloremque sed distinctio
-              architecto quod facere aspernatur eius, iusto maxime sunt.
-            </p>
-            <p className="blog__article-para">
-              Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam,
-              sapiente voluptates labore illum deserunt, deleniti aliquid cum
-              animi doloribus tempore officiis, aut culpa hic ut consequatur
-              voluptatum iste!
-            </p>
+            <p className="blog__article-para">{blogData[0].para1}</p>
+            <p className="blog__article-para">{blogData[0].para2}</p>
+            <p className="blog__article-para">{blogData[0].para3}</p>
           </div>
           <hr className="blog__end-line" />
           <div className="blog__author-about">

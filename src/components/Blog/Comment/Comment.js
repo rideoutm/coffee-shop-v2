@@ -6,7 +6,8 @@ export default function Comment({ blogData }) {
     <div className="comments">
       <h2 className="comments__header">{blogData.length} COMMENTS</h2>
       {/* Create JSON file with data for each blog post, map comments to comment section, swap out placeholder data */}
-      {blogData.map((el, i) => {
+
+      {blogData[0].comments.map((el) => {
         return (
           <>
             <div className="comments__comment">
