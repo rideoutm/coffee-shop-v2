@@ -1,6 +1,4 @@
 import "./Blog.scss";
-// import titleImg from "../../Data/imgs/pexels-anna-urlapova-2956954.jpg";
-import authorImg from "../../Data/imgs/pexels-ketut-subiyanto-4349736.jpg";
 import Comment from "./Comment/Comment";
 import Related from "./Related/Related";
 
