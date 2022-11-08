@@ -1,52 +1,30 @@
 import "./Related.scss";
-import related from "../../../Data/imgs/related.jpg";
 
-export default function Related() {
+import { Link } from "react-router-dom";
+
+export default function Related({ blogData, blogArray }) {
+  // if the current blog's id does not match, map through each object in the list.
+
   return (
     <div className="related">
       <h2 className="related__header">RELATED</h2>
-      <div className="related__item">
-        <div className="related__img-cont">
-          <img className="related__item-img" src={related} alt="" />
-        </div>
-        <div className="related__info">
-          <div className="related__info-title">
-            <h4 className="related__info-title-header">TITLE NAME</h4>
-          </div>
-          <div className="related__info-desc">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </div>
-        </div>
-      </div>
-      <div className="related__item">
-        <div className="related__img-cont">
-          <img className="related__item-img" src={related} alt="" />
-        </div>
-        <div className="related__info">
-          <div className="related__info-title">
-            <h4 className="related__info-title-header">TITLE NAME</h4>
-          </div>
-          <div className="related__info-desc">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </div>
-        </div>
-      </div>
-      <div className="related__item">
-        <div className="related__img-cont">
-          <img className="related__item-img" src={related} alt="" />
-        </div>
-        <div className="related__info">
-          <div className="related__info-title">
-            <h4 className="related__info-title-header">TITLE NAME</h4>
-          </div>
-          <div className="related__info-desc">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </div>
-        </div>
-      </div>
+      {blogData.map((el) => {
+        return blogArray[0].id !== el.id ? (
+          <Link className="related__link" to={`/blog/${el.id}`}>
+            <div className="related__item">
+              <div className="related__img-cont">
+                <img className="related__item-img" src={el.image} alt="" />
+              </div>
+              <div className="related__info">
+                <div className="related__info-title">
+                  <h4 className="related__info-title-header">{el.title}</h4>
+                </div>
+                <div className="related__info-desc">{el.description}</div>
+              </div>
+            </div>
+          </Link>
+        ) : null;
+      })}
       <div className="related__categories">
         <h2 className="related__categories-header">CATEGORIES</h2>
         <ul className="related__list">

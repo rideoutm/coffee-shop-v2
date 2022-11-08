@@ -109,7 +109,7 @@ export default function Blog({ blogData }) {
         </div>
       </div>
       <div className="blog__right">
-        <Related />
+        <Related blogData={blogData} blogArray={blogArray} />
       </div>
     </div>
   );

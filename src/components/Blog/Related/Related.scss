@@ -6,10 +6,14 @@
 .related {
   margin-bottom: 2rem;
 
-  &__item {
+  &__item,
+  &__Link {
     display: flex;
     width: 100%;
+    max-height: 200px;
+
     margin: 1rem 0;
+    color: #000;
 
     &:hover {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -22,10 +26,13 @@
   }
   &__img-cont {
     width: 60%;
+    min-height: 100px;
+    max-width: 300px;
   }
 
   &__item-img {
     width: 100%;
+    height: 100%;
   }
 
   &__info {

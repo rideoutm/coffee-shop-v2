@@ -198,6 +198,9 @@
   @include desktop {
     flex-direction: row;
 
+    &__title-img {
+      height: 700px;
+    }
     &__left {
       margin-right: 0;
       padding-right: 0;
