@@ -6,8 +6,9 @@
 .blog {
   box-sizing: border-box;
   padding: 0 1rem;
+  background: #151412;
 
-  color: #000;
+  color: #fff;
 
   &__title-img {
     padding: 3rem 0 1rem 0;
@@ -197,6 +198,7 @@
 
   @include desktop {
     flex-direction: row;
+    padding-right: 4rem;
 
     &__title-img {
       height: 700px;

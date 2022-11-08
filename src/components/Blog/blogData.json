@@ -83,12 +83,12 @@
     ]
   },
   {
-    "id": "alkj1532av",
+    "id": "iqn591avfd",
     "image": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/blogImage.jpg",
-    "author": "Jane Wellsworth",
+    "author": "Meghan Smith",
     "authorDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias quae. Commodi perspiciatis nisi quis deserunt, laudantium ipsa modi debitis.",
-    "authorImg": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/janeWellsworth.jpg",
-    "date": "05/15/2022",
+    "authorImg": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/meghanSmith.jpg",
+    "date": "05/03/2022",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     "title": "SEIZE THE DAY, BUT FIRST COFFEE",
     "contents": "Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt, deleniti aliquid cum animi doloribus tempore officiis, aut culpa hic ut consequatur voluptatum iste!",
@@ -97,19 +97,29 @@
     "para3": "Vitae hic quibusdam illum, fuga totam necessitatibus modi, voluptate aperiam veritatis minima ratione labore doloremque quod iusto debitis, velit perferendis praesentium! Dolores reiciendis ut similique doloribus aut numquam eligendi ad ipsam repudiandae et fugiat enim ea, fugit dignissimos dolore perspiciatis accusantium. Dignissimos minus, repudiandae modi quia quae hic enim debitis accusamus delectus facilis doloremque sed distinctio architecto quod facere aspernatur eius, iusto maxime sunt.",
     "comments": [
       {
-        "name": "ED DOE",
-        "commentdate": "10/27/2022 4:30pm",
+        "name": "Graham E.",
+        "commentdate": "09/02/2022 11:21pm",
         "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem?"
       },
       {
-        "name": "Kristi Parker",
+        "name": "Kevin Hanes",
         "commentdate": "10/28/2022 1:23pm",
+        "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem? Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt."
+      },
+      {
+        "name": "Kat Yelani",
+        "commentdate": "10/29/2022 9:04am",
+        "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem? Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt."
+      },
+      {
+        "name": "Kevin Hanes",
+        "commentdate": "10/30/2022 8:53pm",
         "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem? Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt."
       }
     ]
   },
   {
-    "id": "akl32xo7z0",
+    "id": "xznv5z1z0",
     "image": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/blogImage2.jpg",
     "author": "Jane Wellsworth",
     "authorDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias quae. Commodi perspiciatis nisi quis deserunt, laudantium ipsa modi debitis.",
@@ -123,24 +133,24 @@
     "para3": "Vitae hic quibusdam illum, fuga totam necessitatibus modi, voluptate aperiam veritatis minima ratione labore doloremque quod iusto debitis, velit perferendis praesentium! Dolores reiciendis ut similique doloribus aut numquam eligendi ad ipsam repudiandae et fugiat enim ea, fugit dignissimos dolore perspiciatis accusantium. Dignissimos minus, repudiandae modi quia quae hic enim debitis accusamus delectus facilis doloremque sed distinctio architecto quod facere aspernatur eius, iusto maxime sunt.",
     "comments": [
       {
-        "name": "ED DOE",
-        "commentdate": "10/27/2022 4:30pm",
+        "name": "M. Elani",
+        "commentdate": "09/11/2022 12:01pm",
         "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem?"
       },
       {
         "name": "Kristi Parker",
-        "commentdate": "10/28/2022 1:23pm",
+        "commentdate": "09/28/2022 5:01am",
         "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem? Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt."
       }
     ]
   },
   {
-    "id": "akl32xo7z0",
-    "image": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/BlogImage3.jpg",
-    "author": "Jane Wellsworth",
+    "id": "c3x19m5gfd",
+    "image": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/blogImage3.jpg",
+    "author": "Joe Frazer",
     "authorDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias quae. Commodi perspiciatis nisi quis deserunt, laudantium ipsa modi debitis.",
-    "authorImg": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/janeWellsworth.jpg",
-    "date": "09/15/2022",
+    "authorImg": "https://raw.githubusercontent.com/rideoutm/coffee-shop-v2/main/src/Data/imgs/JoeF.jpg",
+    "date": "09/21/2022",
     "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     "title": "COFFEE, THE PERFECT CUP.",
     "contents": "Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt, deleniti aliquid cum animi doloribus tempore officiis, aut culpa hic ut consequatur voluptatum iste!",
@@ -149,14 +159,9 @@
     "para3": "Vitae hic quibusdam illum, fuga totam necessitatibus modi, voluptate aperiam veritatis minima ratione labore doloremque quod iusto debitis, velit perferendis praesentium! Dolores reiciendis ut similique doloribus aut numquam eligendi ad ipsam repudiandae et fugiat enim ea, fugit dignissimos dolore perspiciatis accusantium. Dignissimos minus, repudiandae modi quia quae hic enim debitis accusamus delectus facilis doloremque sed distinctio architecto quod facere aspernatur eius, iusto maxime sunt.",
     "comments": [
       {
-        "name": "ED DOE",
-        "commentdate": "10/27/2022 4:30pm",
+        "name": "Jeff S.",
+        "commentdate": "11/05/2022 2:34am",
         "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem?"
-      },
-      {
-        "name": "Kristi Parker",
-        "commentdate": "10/28/2022 1:23pm",
-        "comment": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti officia dolore perspiciatis sed veniam? Autem? Eveniet fugiat repellat tempora necessitatibus beatae nulla ullam, sapiente voluptates labore illum deserunt."
       }
     ]
   }

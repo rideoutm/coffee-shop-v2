@@ -13,7 +13,7 @@
     max-height: 200px;
 
     margin: 1rem 0;
-    color: #000;
+    // color: #000;
 
     &:hover {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -23,11 +23,13 @@
   &__header {
     font-family: "marcellus", serif;
     margin-bottom: 1rem;
+    color: #c7a17a;
   }
   &__img-cont {
     width: 60%;
     min-height: 100px;
-    max-width: 300px;
+    max-height: 100px;
+    max-width: 175px;
   }
 
   &__item-img {
@@ -39,6 +41,10 @@
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
+
+    &-title-header {
+      color: #c7a17a;
+    }
 
     &-desc {
       margin-top: auto;
@@ -52,6 +58,7 @@
     font-family: "marcellus", serif;
     margin-bottom: 1rem;
     margin-top: 2rem;
+    color: #c7a17a;
   }
   &__list {
     list-style-type: none;
