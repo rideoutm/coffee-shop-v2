@@ -12,7 +12,7 @@ import Partners from "../components/Partners/Partners";
 // Utilities
 import { useRef } from "react";
 
-export default function Homepage({ showModal }) {
+export default function Homepage({ showModal, menuRef }) {
   const smoothScrollRef = useRef();
   return (
     <>
@@ -21,7 +21,7 @@ export default function Homepage({ showModal }) {
       <Mission smoothScrollRef={smoothScrollRef} />
       <HpBlogComp />
       <Video />
-      <Menu />
+      <Menu menuRef={menuRef} />
       <ReviewCarousel />
       <Partners />
     </>

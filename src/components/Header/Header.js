@@ -7,8 +7,12 @@ import instagram from "../../Data/imgs/instagram.svg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Header({ handleModal }) {
+export default function Header({ handleModal, menuRef }) {
   const [headerState, setHeaderState] = useState(false);
+
+  const menuBtnScroll = () => {
+    menuRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const changeBackground = () => {
     if (window.scrollY > 200) {
@@ -39,7 +43,7 @@ export default function Header({ handleModal }) {
           </Link>
         </div>
 
-        <div className="header__menu-item">
+        <div onClick={() => menuBtnScroll()} className="header__menu-item">
           <span className="header__menu-item--anim">MENU</span>
         </div>
         <div className="header__menu-item">

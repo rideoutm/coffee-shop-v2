@@ -6,12 +6,13 @@ import Header from "./components/Header/Header";
 import Percolate from "./components/Blog/Blog";
 import blogData from "./components/Blog/blogData.json";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const menuRef = useRef();
 
   const handleModal = () => {
     setShowModal(!showModal);
@@ -22,9 +23,12 @@ function App() {
     <>
       <BrowserRouter>
         <ScrollToTop>
-          <Header handleModal={handleModal} />
+          <Header handleModal={handleModal} menuRef={menuRef} />
           <Routes>
-            <Route path="/" element={<Homepage showModal={showModal} />} />
+            <Route
+              path="/"
+              element={<Homepage showModal={showModal} menuRef={menuRef} />}
+            />
             <Route
               path="/blog/:id"
               element={<Percolate blogData={blogData} />}

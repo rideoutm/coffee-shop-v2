@@ -175,7 +175,7 @@
     font-weight: bold;
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     margin: 0 auto 1rem auto;
     text-align: center;
     background: none;
@@ -217,6 +217,11 @@
           margin-left: 2rem;
         }
       }
+    }
+
+    &__form-btn {
+      width: 30%;
+      margin: 0 0 1rem 0;
     }
   }
 

@@ -21,7 +21,10 @@ export default function Blog({ blogData }) {
     let newComment;
     let nameInfo = e.target.nameInput.value;
     let comment = e.target.commentInput.value;
-    let date = new Date().toLocaleDateString("en-US");
+    let date =
+      new Date().toLocaleDateString("en-US") +
+      " " +
+      new Date().toLocaleTimeString("en-US");
     e.preventDefault();
     if (
       nameState.trim().length < 2 ||

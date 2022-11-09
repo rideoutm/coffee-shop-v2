@@ -1,7 +1,7 @@
 import "./Menu.scss";
 import { useState, useRef, useEffect } from "react";
 
-export default function Menu() {
+export default function Menu({ menuRef }) {
   const [firstMenuAnim, setFirstMenuAnim] = useState();
   const [secondMenuAnim, setSecondMenuAnim] = useState();
 
@@ -38,7 +38,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <div className="menu">
+    <div ref={menuRef} className="menu">
       <h3 className="menu__sub-header">Our</h3>
       <h2 className="menu__header">MENU</h2>
       <div className="menu__container">
