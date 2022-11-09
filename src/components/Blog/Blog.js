@@ -15,21 +15,25 @@ export default function Blog({ blogData }) {
   const [commentClassState, setCommentClassState] = useState(false);
 
   const { id } = useParams();
-  let blogArray;
+  let blogArray = blogData.filter((obj) => obj.id === id);
 
   const handleFormValidation = (e) => {
+    let newComment;
+    let nameInfo = e.target.nameInput.value;
+    let comment = e.target.commentInput.value;
+    let date = new Date().toLocaleDateString("en-US");
     e.preventDefault();
     if (
       nameState.trim().length < 2 ||
-      emailState.trim().length < 2 ||
+      // emailState.trim().length < 2 ||
       commentState.trim().length < 2
     ) {
       if (nameState.trim().length < 2) {
         setNameClassState(true);
       }
-      if (emailState.trim().length < 2) {
-        setEmailClassState(true);
-      }
+      // if (emailState.trim().length < 2) {
+      //   setEmailClassState(true);
+      // }
       if (commentState.trim().length < 2) {
         setCommentClassState(true);
       }
@@ -37,6 +41,17 @@ export default function Blog({ blogData }) {
       return;
     } else {
       // add the obj to the comments array;
+      newComment = {
+        name: nameInfo,
+        commentdate: date,
+        comment: comment,
+      };
+      blogArray[0].comments.push(newComment);
+
+      console.log(blogArray[0]);
+      setNameState("");
+      setEmailState("");
+      setCommentState("");
     }
   };
 
@@ -62,7 +77,6 @@ export default function Blog({ blogData }) {
   };
 
   // Filter JSON data to only the obj that matches the params.
-  blogArray = blogData.filter((obj) => obj.id === id);
 
   return (
     <div className="blog">
@@ -114,9 +128,10 @@ export default function Blog({ blogData }) {
                 type="text"
                 placeholder="Name"
                 value={nameState}
+                name="nameInput"
                 onChange={handleNameInput}
               />
-              <label htmlFor="email"></label>
+              {/* <label htmlFor="email"></label>
               <input
                 className={
                   emailClassState
@@ -128,7 +143,7 @@ export default function Blog({ blogData }) {
                 placeholder="Email"
                 value={emailState}
                 onChange={handleEmailInput}
-              />
+              /> */}
               <label htmlFor="comment"></label>
               <textarea
                 className={
@@ -136,10 +151,10 @@ export default function Blog({ blogData }) {
                     ? "blog__form-comment--invalid"
                     : "blog__form-comment"
                 }
-                name=""
                 id="comment"
                 cols="30"
                 rows="10"
+                name="commentInput"
                 placeholder="Comment"
                 value={commentState}
                 onChange={handleCommentInput}

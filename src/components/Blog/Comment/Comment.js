@@ -7,12 +7,11 @@ export default function Comment({ blogData }) {
       <h2 className="comments__header">
         {blogData[0].comments.length} COMMENTS
       </h2>
-      {/* Create JSON file with data for each blog post, map comments to comment section, swap out placeholder data */}
 
       {blogData[0].comments.map((el, i) => {
         return (
-          <>
-            <div key={Math.random() * 10000} className="comments__comment">
+          <div key={Math.random() * 10000}>
+            <div className="comments__comment">
               <div className="comments__comment-img">
                 <img
                   className="comments__comment-img-pic"
@@ -27,7 +26,7 @@ export default function Comment({ blogData }) {
               </div>
             </div>
             <hr className="comments__comment-hr" />
-          </>
+          </div>
         );
       })}
     </div>
