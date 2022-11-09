@@ -1,4 +1,5 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -34,18 +35,24 @@ export default function Footer() {
       <div className="footer__posts">
         <h2 className="footer__posts-header">BLOG POSTS</h2>
         <ul className="footer__posts-list">
-          <li className="footer__posts-item">
-            SEIZE THE DAY, BUT FIRST COFFEE <br />{" "}
-            <span className="footer__posts-item-date">01/05/2022</span>
-          </li>
-          <li className="footer__posts-item">
-            WITH ALL GOOD THINGS, COFFEE <br />{" "}
-            <span className="footer__posts-item-date">01/05/2022</span>
-          </li>
-          <li className="footer__posts-item">
-            HOW TO MAKE THE PERFECT CUP <br />{" "}
-            <span className="footer__posts-item-date">01/05/2022</span>
-          </li>
+          <Link to="/blog/iqn591avfd">
+            <li className="footer__posts-item">
+              SEIZE THE DAY, BUT FIRST COFFEE <br />{" "}
+              <span className="footer__posts-item-date">01/05/2022</span>
+            </li>
+          </Link>
+          <Link to="/blog/xznv5z1z0">
+            <li className="footer__posts-item">
+              WITH ALL GOOD THINGS, COFFEE <br />{" "}
+              <span className="footer__posts-item-date">01/05/2022</span>
+            </li>
+          </Link>
+          <Link to="/blog/c3x19m5gfd">
+            <li className="footer__posts-item">
+              COFFEE, THE PERFECT CUP <br />{" "}
+              <span className="footer__posts-item-date">01/05/2022</span>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="footer__contact">

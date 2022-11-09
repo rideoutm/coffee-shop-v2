@@ -43,13 +43,19 @@
   &__author {
     &-about {
       display: flex;
+      width: 50%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
+
+      &-left {
+        margin-left: 2rem;
+      }
     }
     &-img {
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
     }
 
@@ -137,11 +143,14 @@
       margin: 1rem 0;
       padding: 1rem 1rem;
       font-family: "nunito sans";
+      outline: #d22d2d;
+      border: 2px solid #d22d2d;
+      resize: none;
 
       &:focus,
       &:active {
-        outline: #d62a2a;
-        border: 1px solid #d62a2a;
+        outline: none;
+        border: 2px solid #d22d2d;
       }
       &::placeholder {
         font-size: 1.25rem;
@@ -194,6 +203,21 @@
     &__right {
       width: 50%;
     }
+
+    &__author {
+      &-about {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        &-left {
+          margin-left: 2rem;
+        }
+      }
+    }
   }
 
   @include desktop {
@@ -210,6 +234,12 @@
 
     &__right {
       padding-top: 4rem;
+    }
+
+    &__author {
+      &-about {
+        width: 60%;
+      }
     }
   }
 }

@@ -26,8 +26,11 @@ export default function Header({ handleModal }) {
   return (
     <div className={!headerState ? "header" : "header--scroll"}>
       <div className="header__logo">
-        <img src={coffeeshoplogo} alt="logo"></img>
+        <Link to="/">
+          <img src={coffeeshoplogo} alt="logo"></img>
+        </Link>
       </div>
+
       <div className="header__menu">
         <div className="header__menu-item">
           <Link to="/">
@@ -40,7 +43,9 @@ export default function Header({ handleModal }) {
           <span className="header__menu-item--anim">MENU</span>
         </div>
         <div className="header__menu-item">
-          <span className="header__menu-item--anim">BLOG</span>
+          <Link to="/blog/nv6lvipxkg">
+            <span className="header__menu-item--anim">BLOG</span>
+          </Link>
         </div>
         <div className="header__menu-item">
           <span className="header__menu-item--anim">SHOP</span>

@@ -8,10 +8,10 @@ import blogData from "./components/Blog/blogData.json";
 
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [blogId, setBlogId] = useState(blogData);
 
   const handleModal = () => {
     setShowModal(!showModal);
@@ -21,16 +21,18 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header handleModal={handleModal} />
-        <Routes>
-          <Route
-            path="/"
-            element={<Homepage showModal={showModal} blogData={blogId} />}
-          />
-          <Route path="/blog/:id" element={<Percolate blogData={blogId} />} />
-        </Routes>
+        <ScrollToTop>
+          <Header handleModal={handleModal} />
+          <Routes>
+            <Route path="/" element={<Homepage showModal={showModal} />} />
+            <Route
+              path="/blog/:id"
+              element={<Percolate blogData={blogData} />}
+            />
+          </Routes>
+        </ScrollToTop>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }

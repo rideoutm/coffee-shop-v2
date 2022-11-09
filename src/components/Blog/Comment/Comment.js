@@ -9,10 +9,10 @@ export default function Comment({ blogData }) {
       </h2>
       {/* Create JSON file with data for each blog post, map comments to comment section, swap out placeholder data */}
 
-      {blogData[0].comments.map((el) => {
+      {blogData[0].comments.map((el, i) => {
         return (
           <>
-            <div className="comments__comment">
+            <div key={Math.random() * 10000} className="comments__comment">
               <div className="comments__comment-img">
                 <img
                   className="comments__comment-img-pic"

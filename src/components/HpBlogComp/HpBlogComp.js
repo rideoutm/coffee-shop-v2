@@ -6,7 +6,7 @@ import blog3 from "../../Data/imgs/image3.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function HpBlogComp({ blogData }) {
+export default function HpBlogComp() {
   return (
     <div className="homepage-blog">
       <div className="homepage-blog__item">
