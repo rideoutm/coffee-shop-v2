@@ -1,0 +1,26 @@
+@use "../../../styles/global.scss" as *;
+@use "../../../styles/partials/typography" as *;
+@use "../../../styles/partials/utilities" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.shop {
+  height: 500px;
+  text-align: center;
+  background: rgba(21, 20, 18, 1);
+  padding-top: 20rem;
+
+  &__header {
+    font-size: 5rem;
+    font-family: "marcellus", serif;
+    color: #c7a17a;
+    animation: 1.5s shopFade ease-in;
+    @keyframes shopFade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -52,7 +52,9 @@ export default function Header({ handleModal, menuRef }) {
           </Link>
         </div>
         <div className="header__menu-item">
-          <span className="header__menu-item--anim">SHOP</span>
+          <Link to="/shop">
+            <span className="header__menu-item--anim">SHOP</span>
+          </Link>
         </div>
         <div className="header__menu-item">|</div>
         <div className="header__menu-item">

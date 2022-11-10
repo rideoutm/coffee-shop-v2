@@ -28,12 +28,14 @@ export default function Modal({ showModal, setShowModal }) {
               <span className="modal__menu-list-item-span">BLOG</span>
             </li>
           </Link>
-          <li
-            onClick={() => setShowModal(false)}
-            className="modal__menu-list-item"
-          >
-            <span className="modal__menu-list-item-span">SHOP</span>
-          </li>
+          <Link to="/shop">
+            <li
+              onClick={() => setShowModal(false)}
+              className="modal__menu-list-item"
+            >
+              <span className="modal__menu-list-item-span">SHOP</span>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
