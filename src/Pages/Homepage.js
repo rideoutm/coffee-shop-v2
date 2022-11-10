@@ -1,6 +1,5 @@
 // Components
 
-import Modal from "../components/Modal/Modal";
 import Carousel from "../components/Carousel/Carousel";
 import Mission from "../components/Mission/Mission";
 import Video from "../components/Video/Video";
@@ -12,12 +11,11 @@ import Partners from "../components/Partners/Partners";
 // Utilities
 import { useRef } from "react";
 
-export default function Homepage({ showModal, menuRef }) {
+export default function Homepage({ menuRef }) {
   const smoothScrollRef = useRef();
   return (
     <>
       <Carousel smoothScrollRef={smoothScrollRef} />
-      <Modal showModal={showModal} />
       <Mission smoothScrollRef={smoothScrollRef} />
       <HpBlogComp />
       <Video />
