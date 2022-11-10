@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/coffee-shop-v2">
         <ScrollToTop>
           <Header handleModal={handleModal} menuRef={menuRef} />
           <Routes>
