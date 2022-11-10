@@ -16,6 +16,9 @@ Coffee Shop V2 is currently deployed and can be viewed at:
 # Features
 
 - A custom built hero carousel.
+- A custom built testimonials/reviews carousel.
+- A blog "intro" page on the homepage, which showcases 3 blog posts with respective links.
+- A video component where a company could input footage of their coffee shop, customers, employees, events that represent their business etc.
 - A blog page with dynamically fed data from a JSON file. Also contains a comments section and a form to input a new comment. New comments are removed on page refresh to maintain the intended viewing state of the demo.
 - An ecommerce shop that will be built in phase 2.
 
