@@ -38,7 +38,7 @@ export default function Menu({ menuRef }) {
   }, []);
 
   return (
-    <div ref={menuRef} className="menu">
+    <div id="menuId" ref={menuRef} className="menu">
       <h3 className="menu__sub-header">Our</h3>
       <h2 className="menu__header">MENU</h2>
       <div className="menu__container">

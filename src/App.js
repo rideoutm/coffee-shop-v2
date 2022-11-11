@@ -21,11 +21,19 @@ function App() {
     return showModal;
   };
 
+  const menuBtnScroll = () => {
+    menuRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <BrowserRouter basename="/coffee-shop-v2">
         <ScrollToTop>
-          <Header handleModal={handleModal} menuRef={menuRef} />
+          <Header
+            handleModal={handleModal}
+            menuRef={menuRef}
+            menuBtnScroll={menuBtnScroll}
+          />
           <Routes>
             <Route
               path="/"
@@ -43,7 +51,11 @@ function App() {
             />
             <Route path="/shop" element={<Shop />} />
           </Routes>
-          <Modal showModal={showModal} setShowModal={setShowModal} />
+          <Modal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            menuBtnScroll={menuBtnScroll}
+          />
         </ScrollToTop>
         <Footer />
       </BrowserRouter>

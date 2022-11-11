@@ -5,15 +5,32 @@ import twitter from "../../Data/imgs/twitter.svg";
 import instagram from "../../Data/imgs/instagram.svg";
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-export default function Header({ handleModal, menuRef }) {
+export default function Header({ handleModal, menuBtnScroll }) {
   const [headerState, setHeaderState] = useState(false);
+  const navigate = useNavigate();
+  let location = useLocation();
 
-  const menuBtnScroll = () => {
-    menuRef.current.scrollIntoView({ behavior: "smooth" });
+  // If on different page, route to homepage and then scroll to menu
+  const headerRouteChange = () => {
+    let path = "/#menuId";
+
+    if (location.hash !== path) {
+      navigate(path);
+      setTimeout(() => {
+        menuBtnScroll();
+      }, 500);
+    }
+    // if (location.pathname !== path)
+    else {
+      menuBtnScroll();
+    }
+
+    console.log(location);
   };
 
+  // change header background when user scrolls a distance
   const changeBackground = () => {
     if (window.scrollY > 200) {
       setHeaderState(true);
@@ -43,7 +60,7 @@ export default function Header({ handleModal, menuRef }) {
           </Link>
         </div>
 
-        <div onClick={() => menuBtnScroll()} className="header__menu-item">
+        <div onClick={() => headerRouteChange()} className="header__menu-item">
           <span className="header__menu-item--anim">MENU</span>
         </div>
         <div className="header__menu-item">
