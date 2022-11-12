@@ -48,7 +48,11 @@ export default function Header({ handleModal, menuBtnScroll }) {
     <div className={!headerState ? "header" : "header--scroll"}>
       <div className="header__logo">
         <Link to="/">
-          <img src={coffeeshoplogo} alt="logo"></img>
+          <img
+            className="header__logo-img"
+            src={coffeeshoplogo}
+            alt="logo"
+          ></img>
         </Link>
       </div>
 
