@@ -1,5 +1,6 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
+import blogData from "../Blog/blogData.json";
 
 export default function Footer() {
   return (
@@ -37,20 +38,17 @@ export default function Footer() {
         <ul className="footer__posts-list">
           <Link to="/blog/iqn591avfd">
             <li className="footer__posts-item">
-              SEIZE THE DAY, BUT FIRST COFFEE <br />{" "}
-              <span className="footer__posts-item-date">01/05/2022</span>
+              SEIZE THE DAY, BUT FIRST COFFEE <br /> <span className="footer__posts-item-date">05/03/2022</span>
             </li>
           </Link>
           <Link to="/blog/xznv5z1z0">
             <li className="footer__posts-item">
-              WITH ALL GOOD THINGS, COFFEE <br />{" "}
-              <span className="footer__posts-item-date">01/05/2022</span>
+              WITH ALL GOOD THINGS, COFFEE <br /> <span className="footer__posts-item-date">09/15/2022</span>
             </li>
           </Link>
           <Link to="/blog/c3x19m5gfd">
             <li className="footer__posts-item">
-              COFFEE, THE PERFECT CUP <br />{" "}
-              <span className="footer__posts-item-date">01/05/2022</span>
+              COFFEE, THE PERFECT CUP <br /> <span className="footer__posts-item-date">09/21/2022</span>
             </li>
           </Link>
         </ul>
