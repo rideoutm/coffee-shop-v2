@@ -13,8 +13,7 @@ const slideData = [
     Logo: logo,
     maintext1: "ROASTED TO",
     maintext2: "PERFECTION",
-    subtext:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
+    subtext: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
   },
   {
     id: 1,
@@ -22,8 +21,7 @@ const slideData = [
     Logo: logo,
     maintext1: "ONLY THE",
     maintext2: "FINEST BEANS",
-    subtext:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
+    subtext: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
   },
   {
     id: 2,
@@ -31,8 +29,7 @@ const slideData = [
     Logo: logo,
     maintext1: "COME TO",
     maintext2: "SIT & UNWIND",
-    subtext:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
+    subtext: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Voluptates, facilis?",
   },
 ];
 
@@ -40,9 +37,7 @@ export default function Carousel({ smoothScrollRef }) {
   const [index, setIndex] = useState(0);
   const [logo, setLogo] = useState("carousel__logo--anim");
   const [animation, setAnimation] = useState("carousel__main-text--anim");
-  const [subTextAnimation, setSubTextAnimation] = useState(
-    "carousel__sub-text--anim"
-  );
+  const [subTextAnimation, setSubTextAnimation] = useState("carousel__sub-text--anim");
   const [btnAnimation, setBtnAnimation] = useState("carousel__btn--anim");
 
   // State handler functions, Carousel scroll func.
@@ -56,15 +51,13 @@ export default function Carousel({ smoothScrollRef }) {
   };
 
   const handleAnimTimeOutIndexReset = () => {
-    return (
-      setTimeout(() => {
-        setLogo("carousel__logo--anim");
-        setAnimation("carousel__main-text--anim");
-        setSubTextAnimation("carousel__sub-text--anim");
-        setBtnAnimation("carousel__btn--anim");
-      }, 500),
-      setTimeout(() => stateReset(), 4900)
-    );
+    return setTimeout(() => {
+      setLogo("carousel__logo--anim");
+      setAnimation("carousel__main-text--anim");
+      setSubTextAnimation("carousel__sub-text--anim");
+      setBtnAnimation("carousel__btn--anim");
+      setTimeout(() => stateReset(), 4300);
+    }, 500);
   };
 
   const carouselScroll = () => {
