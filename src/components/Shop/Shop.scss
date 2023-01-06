@@ -6,24 +6,101 @@
 .shop {
   text-align: center;
   background: rgba(21, 20, 18, 1);
-  padding-top: 15rem;
+  padding-top: 10rem;
   height: 100%;
+  padding-bottom: 3rem;
 
   &__header {
-    font-size: 5rem;
-    font-family: "marcellus", serif;
+    font-family: "marcellus", sans-serif;
+    font-size: 3rem;
     color: #c7a17a;
-    animation: 1s shopFade 0.75s ease-in forwards;
-    // height: 100%;
-    padding-bottom: 12rem;
-    opacity: 0;
-    @keyframes shopFade {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    // margin-top: 7rem;
+  }
+
+  &__item-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 2rem;
+  }
+
+  &__item-img {
+    width: 60%;
+    margin: 3rem auto 0 auto;
+    // display: flex;
+    // justify-content: center;
+
+    &-icon {
+      border-radius: 5px;
+      width: 100%;
     }
   }
+
+  &__sub-cont {
+    position: relative;
+  }
+
+  &__add-to-cart {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    font-family: "nunito sans";
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: #fff;
+    color: #fff;
+    border: none;
+    opacity: 0;
+    z-index: 5;
+    // visibility: hidden;
+    transition: 0.25s ease-in;
+
+    &:hover {
+      background: #c7a17a;
+      color: #fff;
+      opacity: 1;
+      // visibility: visible;/
+      transition: 0.25s ease-in;
+    }
+  }
+
+  &__item-name {
+    font-family: "marcellus", serif;
+    color: #c7a17a;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__item-price {
+    margin-top: 0.5rem;
+    font-family: "nunito sans";
+    color: #fff;
+    font-size: 1.25rem;
+  }
+
+  // &__header {
+  //   font-size: 5rem;
+  //   font-family: "marcellus", serif;
+  //   color: #c7a17a;
+  //   animation: 1s shopFade 0.75s ease-in forwards;
+  //   // height: 100%;
+  //   padding-bottom: 12rem;
+  //   opacity: 0;
+  //   @keyframes shopFade {
+  //     0% {
+  //       opacity: 0;
+  //     }
+  //     100% {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
 }

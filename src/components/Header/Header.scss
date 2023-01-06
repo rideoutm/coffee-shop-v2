@@ -40,9 +40,19 @@
       width: 90%;
     }
   }
+
+  &__mobile-nav {
+    display: flex;
+    flex-direction: row;
+
+    &-link {
+      display: flex;
+    }
+  }
+
   &__ham-menu {
     height: 100%;
-    width: 60px;
+    width: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,8 +76,37 @@
     display: none;
   }
 
+  &__mobile-cart {
+    filter: invert(100%) sepia(14%) saturate(7499%) hue-rotate(180deg) brightness(104%) contrast(112%);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      display: inline-block;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      margin-right: 2rem;
+      // padding-right: 0.25rem;
+    }
+
+    &-total {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+      font-size: 1rem;
+      color: #000;
+    }
+  }
+
   @include tablet {
     &__ham-menu {
+      display: none;
+    }
+
+    &__mobile-nav {
       display: none;
     }
 
@@ -79,18 +118,48 @@
       display: flex;
       align-items: center;
       color: #fff;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       padding-right: 3.5rem;
 
-      &-item {
+      // Color needs to be inverted to black due to the
+      //  filter.
+      &-item-cart {
+        filter: invert(100%) sepia(14%) saturate(7499%) hue-rotate(180deg) brightness(104%) contrast(112%);
+        font-weight: 600;
+        position: relative;
+        z-index: 4;
+        color: #000;
+
+        &-icon {
+          width: 30px;
+          margin-bottom: -5px;
+        }
+      }
+
+      &-item-cart-total {
+        position: absolute;
+        top: -13px;
+        right: -0.625rem;
+        z-index: 5;
+        font-size: 0.9rem;
+        color: #000;
+      }
+
+      &-item,
+      &-item-cart {
         padding-left: 1rem;
 
-        &--anim {
+        &--anim-link {
+          color: #000;
+        }
+
+        &--anim,
+        &--anim-link {
           --thickness: 2px;
           --strike: 0;
 
-          background: linear-gradient(90deg, transparent, currentColor 0)
-            no-repeat right center / calc(var(--strike) * 100%) var(--thickness);
+          background: linear-gradient(90deg, transparent, currentColor 0) no-repeat right center /
+            calc(var(--strike) * 100%) var(--thickness);
 
           transition: background-size 0.4s ease;
 
@@ -106,8 +175,7 @@
     &__menu-img {
       margin-bottom: -0.25rem;
       height: 25px;
-      filter: invert(100%) sepia(99%) saturate(15%) hue-rotate(241deg)
-        brightness(104%) contrast(100%);
+      filter: invert(100%) sepia(99%) saturate(15%) hue-rotate(241deg) brightness(104%) contrast(100%);
     }
   }
 
