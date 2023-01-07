@@ -19,7 +19,7 @@ const shopUi = createSlice({
         });
       } else {
         existingItem.quantity++;
-        existingItem.totalPrice = existingItem.totalPrice + newItem.price;
+        existingItem.totalPrice = (existingItem.totalPrice + newItem.price).toFixed(2);
       }
     },
     removeItemFromCart(state, action) {
@@ -27,10 +27,32 @@ const shopUi = createSlice({
 
       console.log("QUANTITY: ", product.quantity);
       if (product) {
-        state.totalQuantity = state.totalQuantity - product.quantity;
+        state.totalQuantity = (state.totalQuantity - product.quantity).toFixed(2);
         state.item = state.item.filter((item) => item.id !== action.payload);
       } else {
         return;
+      }
+    },
+    incrementCart(state, action) {
+      const product = state.item.find((item) => item.id === action.payload);
+      if (product) {
+        product.quantity++;
+        state.totalQuantity++;
+        product.totalPrice = (product.price * product.quantity).toFixed(2);
+      } else {
+        return;
+      }
+    },
+    decrementCart(state, action) {
+      const product = state.item.find((item) => item.id === action.payload);
+
+      if (product.quantity >= 1) {
+        product.quantity--;
+        state.totalQuantity--;
+        console.log("QUANTITY: ", product.quantity);
+        product.totalPrice = (product.price * product.quantity).toFixed(2);
+      } else {
+        state.item = state.item.filter((item) => item.id !== action.payload);
       }
     },
   },

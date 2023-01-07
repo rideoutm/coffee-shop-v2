@@ -10,7 +10,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
-export default function Header({ handleModal, menuBtnScroll }) {
+export default function Header({ handleModal, menuBtnScroll, setShowModal, showModal }) {
   const [headerState, setHeaderState] = useState(false);
   const navigate = useNavigate();
   let location = useLocation();
@@ -34,6 +34,14 @@ export default function Header({ handleModal, menuBtnScroll }) {
     }
 
     console.log(location);
+  };
+
+  const closeModalMenuOnCartClick = () => {
+    if (showModal) {
+      setShowModal(!showModal);
+    } else {
+      return;
+    }
   };
 
   // change header background when user scrolls a distance
@@ -109,7 +117,7 @@ export default function Header({ handleModal, menuBtnScroll }) {
 
       <div className="header__mobile-nav">
         <Link className="header__mobile-nav-link" to="/cart">
-          <div className="header__mobile-cart">
+          <div onClick={() => closeModalMenuOnCartClick()} className="header__mobile-cart">
             {<img className="header__mobile-cart-icon" src={shoppingCart} alt="shopping cart"></img>}
             <div className="header__mobile-cart-total">{totalQuantity}</div>
           </div>

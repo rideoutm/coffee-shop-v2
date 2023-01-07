@@ -32,7 +32,13 @@ function App() {
     <>
       <BrowserRouter basename="/coffee-shop-v2">
         <ScrollToTop>
-          <Header handleModal={handleModal} menuRef={menuRef} menuBtnScroll={menuBtnScroll} />
+          <Header
+            handleModal={handleModal}
+            menuRef={menuRef}
+            menuBtnScroll={menuBtnScroll}
+            setShowModal={setShowModal}
+            showModal={showModal}
+          />
           <Routes>
             <Route
               path="/"
