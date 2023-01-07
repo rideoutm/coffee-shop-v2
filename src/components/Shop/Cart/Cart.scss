@@ -12,13 +12,39 @@
   }
 
   &__cart-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    // width: 100%;
   }
 
   &__cart-headers {
     display: flex;
+    justify-content: center;
     color: #c7a17a;
     font-family: "marcellus";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #c7a17a;
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  &__cart-product,
+  &__cart-price,
+  &__cart-quantity,
+  &__cart-subtotal {
+    margin: 0 1rem;
+  }
+
+  &__cart-items {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 0 2rem;
+  }
+
+  &__item-cont {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 2.5fr 2fr;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }

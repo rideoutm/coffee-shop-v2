@@ -8,20 +8,20 @@ import ShopItem from "./ShopItem/ShopItem";
 
 const ShopData = [
   {
-    id: 1,
+    id: "1a",
     image: frenchpress,
     name: "FRENCH PRESS",
     price: 19.99,
   },
-  { id: 2, image: coffeepods, name: "DARK BLEND COFFEE PODS, 20pc", price: 15.99 },
+  { id: "2b", image: coffeepods, name: "DARK BLEND COFFEE PODS, 20pc", price: 15.99 },
   {
-    id: 3,
+    id: "3c",
     image: coffeepods2,
     name: "LIGHT BLEND COFFEE PODS, 20pc",
     price: 15.99,
   },
   {
-    id: 4,
+    id: "4d",
     image: cup,
     name: "CERAMIC COFFEE CUP",
     price: 12.99,

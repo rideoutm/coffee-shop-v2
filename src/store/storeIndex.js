@@ -22,6 +22,17 @@ const shopUi = createSlice({
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;
       }
     },
+    removeItemFromCart(state, action) {
+      const product = state.item.find((item) => item.id === action.payload);
+
+      console.log("QUANTITY: ", product.quantity);
+      if (product) {
+        state.totalQuantity = state.totalQuantity - product.quantity;
+        state.item = state.item.filter((item) => item.id !== action.payload);
+      } else {
+        return;
+      }
+    },
   },
 });
 
