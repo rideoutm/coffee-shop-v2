@@ -6,9 +6,10 @@ import { storeActions } from "../../../store/storeIndex";
 
 export default function Cart() {
   const item = useSelector((state) => state.ui.item);
+  const finalTotal = useSelector((state) => state.ui.finalTotal);
   // const [cartIsEmpty, setCartIsEmpty] = useState(item);
   const dispatch = useDispatch();
-  console.log(item);
+  console.log("ITEM: ", item);
   return (
     <div className="cart">
       <h1 className="cart__header">CART</h1>
@@ -55,6 +56,10 @@ export default function Cart() {
               );
             })
           )}
+          <div className="cart__cart-total">
+            <div>TOTAL</div>
+            <div>{finalTotal.toFixed(2)}</div>
+          </div>
         </div>
       </div>
     </div>
