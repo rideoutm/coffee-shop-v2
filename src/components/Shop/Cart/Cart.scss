@@ -1,3 +1,7 @@
+@use "../../../../styles/global.scss" as *;
+@use "../../../../styles/partials/typography" as *;
+@use "../../../../styles/partials/utilities" as *;
+@use "../../../../styles/partials/mixins" as *;
 .cart {
   margin-top: 7rem;
   background: #151412;
@@ -20,6 +24,7 @@
 
   &__cart-empty {
     font-size: 2rem;
+    min-height: 200px;
     font-family: "nunito sans", sans-serif;
     text-align: center;
   }
@@ -41,6 +46,10 @@
   //   margin: 0 1rem;
   // }
 
+  &__cart-price {
+    margin-left: 1rem;
+  }
+
   &__cart-item-quantity {
     display: flex;
     justify-content: flex-start;
@@ -50,7 +59,19 @@
     cursor: pointer;
     font-weight: 600;
   }
+  &__cart-item-name {
+    display: flex;
+  }
+  &__cart-item-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
 
+  &__cart-item-price {
+    margin-left: 1rem;
+  }
   &__cart-item-increment,
   &__cart-item-decrement {
     display: flex;
@@ -77,24 +98,62 @@
   &__cart-items {
     display: flex;
     flex-direction: column;
+    // justify-content: space-between;
     color: #fff;
+    min-height: 200px;
     margin: 0 2rem 2rem 2rem;
-    border-bottom: 1px solid #c7a17a;
   }
 
   &__item-cont {
     display: grid;
-    grid-template-columns: 0.7fr 2fr 1.5fr 2fr 2fr;
+    grid-template-columns: 0.5fr 2.2fr 1.5fr 2fr 2fr;
+    // height: 300px;
     width: 100%;
     margin-bottom: 1rem;
   }
 
   &__cart-total {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     font-family: "marcellus", sans-serif;
+
     color: #c7a17a;
     font-size: 2rem;
+    border-bottom: 1px solid #c7a17a;
     // margin: 0 1.5rem;
+  }
+
+  &__checkout {
+    margin-top: 1rem;
+    padding: 0.75rem 0.5rem;
+    background: #fff;
+    color: #30271c;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: 0.15s ease-in;
+    font-family: "nunito sans";
+
+    &:hover {
+      background: #c7a17a;
+      color: #fff;
+    }
+  }
+
+  @include tablet {
+    &__cart-container {
+      width: 80%;
+      margin: 1rem auto 0 auto;
+    }
+
+    &__checkout {
+      width: 15rem;
+      margin: 1rem auto;
+    }
+  }
+
+  @include desktop {
+    &__cart-container {
+      width: 60%;
+    }
   }
 }

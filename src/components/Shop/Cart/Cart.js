@@ -34,7 +34,10 @@ export default function Cart() {
                   >
                     X
                   </div>
-                  <div className="cart__cart-item-name">{el.name}</div>
+                  <div className="cart__cart-item-name">
+                    <img className="cart__cart-item-img" src={el.image}></img>
+                    {el.name}
+                  </div>
                   <div className="cart__cart-item-price">{`$${el.price}`}</div>
                   <div className="cart__cart-item-quantity">
                     {el.quantity}{" "}
@@ -57,9 +60,10 @@ export default function Cart() {
             })
           )}
           <div className="cart__cart-total">
-            <div>TOTAL</div>
-            <div>{finalTotal.toFixed(2)}</div>
+            <p>TOTAL</p>
+            <div>{`$${finalTotal.toFixed(2)}`}</div>
           </div>
+          <button className="cart__checkout">CHECKOUT</button>
         </div>
       </div>
     </div>

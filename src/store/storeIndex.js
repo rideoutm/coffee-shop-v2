@@ -32,9 +32,7 @@ const shopUi = createSlice({
       if (product) {
         state.totalQuantity = state.totalQuantity - product.quantity;
         state.item = state.item.filter((item) => item.id !== action.payload);
-        state.finalTotal -= Number(product.totalPrice.toFixed(2));
-      } else if (state.finalTotal === 0) {
-        state.finalTotal = 0;
+        state.finalTotal = state.item.reduce((sumTotal, current) => (sumTotal += current.totalPrice), 0);
       }
     },
     incrementCart(state, action) {
@@ -53,7 +51,6 @@ const shopUi = createSlice({
 
       if (product.quantity >= 1) {
         product.quantity--;
-
         state.totalQuantity--;
 
         console.log("QUANTITY: ", product.quantity);
