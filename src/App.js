@@ -10,6 +10,7 @@ import Modal from "./components/Modal/Modal";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Shop/Cart/Cart";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Product from "./components/Shop/Product/Product";
 
 // Utils
 import { useState, useRef } from "react";
@@ -47,6 +48,7 @@ function App() {
             <Route path="/blog/:id" element={<Percolate blogData={blogData} />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/product" element={<Product />} />
           </Routes>
           <Modal showModal={showModal} setShowModal={setShowModal} menuBtnScroll={menuBtnScroll} />
         </ScrollToTop>

@@ -80,14 +80,12 @@ export default function Shop() {
                       </div>
                       <div>
                         <h3 className="shop__right-product-name">{el.name}</h3>
-                        <p className="shop__right-product-price">{el.price}</p>
+                        <p className="shop__right-product-price">${el.price}</p>
                       </div>
                     </div>
                   </li>
                 );
             })}
-            <li></li>
-            <li></li>
           </ul>
         </div>
       </div>
