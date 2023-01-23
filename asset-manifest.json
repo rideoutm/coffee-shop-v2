@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coffee-shop-v2/static/css/main.715c2aac.css",
-    "main.js": "/coffee-shop-v2/static/js/main.2c309899.js",
+    "main.js": "/coffee-shop-v2/static/js/main.4a3a144b.js",
     "static/media/coffeeshopvid.mp4": "/coffee-shop-v2/static/media/coffeeshopvid.02ea08338dd5789a5d90.mp4",
     "static/media/brooke-cagle-8jp-6SjVibM-unsplash.jpg": "/coffee-shop-v2/static/media/brooke-cagle-8jp-6SjVibM-unsplash.ff0b730fd69ead99d902.jpg",
     "static/media/nathan-dumlao-KixfBEdyp64-unsplash.jpg": "/coffee-shop-v2/static/media/nathan-dumlao-KixfBEdyp64-unsplash.b5ba4c415b029db2146f.jpg",
@@ -32,10 +32,10 @@
     "static/media/quote-left-solid.svg": "/coffee-shop-v2/static/media/quote-left-solid.e7cd6ce40e34c118a08191aa2f1cecc2.svg",
     "static/media/square-facebook.svg": "/coffee-shop-v2/static/media/square-facebook.db34b680d0af90ad5e09cb6d7c5acc84.svg",
     "main.715c2aac.css.map": "/coffee-shop-v2/static/css/main.715c2aac.css.map",
-    "main.2c309899.js.map": "/coffee-shop-v2/static/js/main.2c309899.js.map"
+    "main.4a3a144b.js.map": "/coffee-shop-v2/static/js/main.4a3a144b.js.map"
   },
   "entrypoints": [
     "static/css/main.715c2aac.css",
-    "static/js/main.2c309899.js"
+    "static/js/main.4a3a144b.js"
   ]
 }
