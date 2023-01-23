@@ -14,7 +14,7 @@ export default function Product({ ShopData }) {
   const [showDesc, setShowDesc] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
-  console.log(productArray);
+  // console.log(productArray);
   const handleDesc = () => {
     setShowDesc(!showDesc);
     if (showInfo) {

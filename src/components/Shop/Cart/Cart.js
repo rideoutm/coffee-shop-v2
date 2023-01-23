@@ -9,7 +9,7 @@ export default function Cart() {
   const finalTotal = useSelector((state) => state.ui.finalTotal);
   // const [cartIsEmpty, setCartIsEmpty] = useState(item);
   const dispatch = useDispatch();
-  console.log("ITEM: ", item);
+  // console.log("ITEM: ", item);
   return (
     <div className="cart">
       <h1 className="cart__header">CART</h1>

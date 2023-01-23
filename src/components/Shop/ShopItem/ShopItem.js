@@ -8,7 +8,6 @@ export default function ShopItem({ name, image, price, id }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [showBtn, setShowBtn] = useState(false);
-  console.log(showBtn);
 
   const handleProductPageLink = () => {
     navigate(`/product/${id}`);

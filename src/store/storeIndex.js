@@ -28,7 +28,7 @@ const shopUi = createSlice({
     removeItemFromCart(state, action) {
       const product = state.item.find((item) => item.id === action.payload);
 
-      console.log("QUANTITY: ", product.quantity);
+      // console.log("QUANTITY: ", product.quantity);
       if (product) {
         state.totalQuantity = state.totalQuantity - product.quantity;
         state.item = state.item.filter((item) => item.id !== action.payload);
@@ -53,7 +53,7 @@ const shopUi = createSlice({
         product.quantity--;
         state.totalQuantity--;
 
-        console.log("QUANTITY: ", product.quantity);
+        // console.log("QUANTITY: ", product.quantity);
         product.totalPrice = Number((product.price * product.quantity).toFixed(2));
         state.finalTotal = state.item.reduce((sumTotal, current) => (sumTotal += current.totalPrice), 0);
       } else {

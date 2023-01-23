@@ -21,10 +21,7 @@ export default function Blog({ blogData }) {
     let newComment;
     let nameInfo = e.target.nameInput.value;
     let comment = e.target.commentInput.value;
-    let date =
-      new Date().toLocaleDateString("en-US") +
-      " " +
-      new Date().toLocaleTimeString("en-US");
+    let date = new Date().toLocaleDateString("en-US") + " " + new Date().toLocaleTimeString("en-US");
     e.preventDefault();
     if (
       nameState.trim().length < 2 ||
@@ -51,7 +48,7 @@ export default function Blog({ blogData }) {
       };
       blogArray[0].comments.push(newComment);
 
-      console.log(blogArray[0]);
+      // console.log(blogArray[0]);
       setNameState("");
       setEmailState("");
       setCommentState("");
@@ -100,18 +97,13 @@ export default function Blog({ blogData }) {
           <hr className="blog__end-line" />
           <div className="blog__author-about">
             <div className="blog__author-about-right">
-              <img
-                className="blog__author-img"
-                src={blogArray[0].authorImg}
-                alt="image of author"
-              />
+              <img className="blog__author-img" src={blogArray[0].authorImg} alt="image of author" />
             </div>
             <div className="blog__author-about-left">
               <h3 className="blog__author-name">{blogArray[0].author}</h3>
               <div className="blog__author-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti, alias quae. Commodi perspiciatis nisi quis deserunt,
-                laudantium ipsa modi debitis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias quae. Commodi perspiciatis nisi
+                quis deserunt, laudantium ipsa modi debitis.
               </div>
             </div>
           </div>
@@ -122,11 +114,7 @@ export default function Blog({ blogData }) {
             <form action="" onSubmit={handleFormValidation}>
               <label htmlFor="name"></label>
               <input
-                className={
-                  nameClassState
-                    ? "blog__form-name--invalid"
-                    : "blog__form-name"
-                }
+                className={nameClassState ? "blog__form-name--invalid" : "blog__form-name"}
                 id="name"
                 type="text"
                 placeholder="Name"
@@ -149,11 +137,7 @@ export default function Blog({ blogData }) {
               /> */}
               <label htmlFor="comment"></label>
               <textarea
-                className={
-                  commentClassState
-                    ? "blog__form-comment--invalid"
-                    : "blog__form-comment"
-                }
+                className={commentClassState ? "blog__form-comment--invalid" : "blog__form-comment"}
                 id="comment"
                 cols="30"
                 rows="10"
