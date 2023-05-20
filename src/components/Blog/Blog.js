@@ -2,7 +2,7 @@ import "./Blog.scss";
 import Comment from "./Comment/Comment";
 import Related from "./Related/Related";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 export default function Blog({ blogData }) {
@@ -13,9 +13,28 @@ export default function Blog({ blogData }) {
   const [nameClassState, setNameClassState] = useState(false);
   const [emailClassState, setEmailClassState] = useState(false);
   const [commentClassState, setCommentClassState] = useState(false);
+  const [testBlogData, setTestBlogData] = useState([]);
 
   const { id } = useParams();
-  let blogArray = blogData.filter((obj) => obj.id === id);
+  // let blogArray = blogData.filter((obj) => obj.id === id);
+
+  useEffect(() => {
+    try {
+      const getBlogData = async () => {
+        const response = await fetch("https://coffee-shop-v2-d0913-default-rtdb.firebaseio.com/blogData.json");
+        const responseData = await response.json();
+
+        setTestBlogData(responseData);
+      };
+      getBlogData();
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
+  let testArray = testBlogData?.filter((obj) => obj?.id === id);
+  // console.log(testBlogData);
+  // let blogArray = testBlogData?.filter((obj) => obj.id === id);
 
   const handleFormValidation = (e) => {
     let newComment;
@@ -46,7 +65,7 @@ export default function Blog({ blogData }) {
         commentdate: date,
         comment: comment,
       };
-      blogArray[0].comments.push(newComment);
+      testArray[0].comments.push(newComment);
 
       // console.log(blogArray[0]);
       setNameState("");
@@ -77,30 +96,30 @@ export default function Blog({ blogData }) {
   };
 
   // Filter JSON data to only the obj that matches the params.
-
+  if (!testBlogData) return <h1>No data</h1>;
   return (
     <div className="blog">
       <div className="blog__left">
-        <img className="blog__title-img" src={blogArray[0].image} alt="title" />
+        <img className="blog__title-img" src={testArray[0]?.image} alt="title" />
 
         <div className="blog__info">
-          by <span className="blog__info-author">{blogArray[0].author}</span> |{" "}
-          <span className="blog__info-date"> {blogArray[0].date}</span>
+          by <span className="blog__info-author">{testArray[0]?.author}</span> |{" "}
+          <span className="blog__info-date"> {testArray[0]?.date}</span>
         </div>
         <div className="blog__article">
-          <h2 className="blog__article-title">{blogArray[0].title}</h2>
+          <h2 className="blog__article-title">{testArray[0]?.title}</h2>
           <div className="blog__article-content">
-            <p className="blog__article-para">{blogArray[0].para1}</p>
-            <p className="blog__article-para">{blogArray[0].para2}</p>
-            <p className="blog__article-para">{blogArray[0].para3}</p>
+            <p className="blog__article-para">{testArray[0]?.para1}</p>
+            <p className="blog__article-para">{testArray[0]?.para2}</p>
+            <p className="blog__article-para">{testArray[0]?.para3}</p>
           </div>
           <hr className="blog__end-line" />
           <div className="blog__author-about">
             <div className="blog__author-about-right">
-              <img className="blog__author-img" src={blogArray[0].authorImg} alt="image of author" />
+              <img className="blog__author-img" src={testBlogData[0]?.authorImg} alt="author" />
             </div>
             <div className="blog__author-about-left">
-              <h3 className="blog__author-name">{blogArray[0].author}</h3>
+              <h3 className="blog__author-name">{testBlogData[0]?.author}</h3>
               <div className="blog__author-desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias quae. Commodi perspiciatis nisi
                 quis deserunt, laudantium ipsa modi debitis.
@@ -108,7 +127,7 @@ export default function Blog({ blogData }) {
             </div>
           </div>
           <hr className="blog__author-btm-hr" />
-          <Comment blogData={blogArray} />
+          <Comment blogData={testArray} />
           <div>
             <h2 className="blog__form-header">POST A COMMENT</h2>
             <form action="" onSubmit={handleFormValidation}>
@@ -154,7 +173,7 @@ export default function Blog({ blogData }) {
         </div>
       </div>
       <div className="blog__right">
-        <Related blogData={blogData} blogArray={blogArray} />
+        <Related blogData={testBlogData} blogArray={testArray} />
       </div>
     </div>
   );

@@ -9,17 +9,17 @@ export default function Related({ blogData, blogArray }) {
     <div className="related">
       <h2 className="related__header">RELATED</h2>
       {blogData.map((el) => {
-        return blogArray[0].id !== el.id ? (
-          <Link key={el.id} className="related__link" to={`/blog/${el.id}`}>
+        return blogArray[0]?.id !== el.id ? (
+          <Link key={el?.id} className="related__link" to={`/blog/${el?.id}`}>
             <div className="related__item">
               <div className="related__img-cont">
-                <img className="related__item-img" src={el.image} alt="" />
+                <img className="related__item-img" src={el?.image} alt="" />
               </div>
               <div className="related__info">
                 <div className="related__info-title">
-                  <h4 className="related__info-title-header">{el.title}</h4>
+                  <h4 className="related__info-title-header">{el?.title}</h4>
                 </div>
-                <div className="related__info-desc">{el.description}</div>
+                <div className="related__info-desc">{el?.description}</div>
               </div>
             </div>
           </Link>
